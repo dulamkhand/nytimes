@@ -43,7 +43,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
         
         
        
-        <br clear="all">
+        <br clear="all"> 	
     </div><!--wrapper-->    
     
     <div id="mainmenu">
@@ -54,33 +54,28 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
                 <li><a href="<?php echo url_for('page/byNbComment')?>" style="width:130px;">Их сэтгэгдэлтэй</a></li>
                 <li><a href="<?php echo url_for('page/archive')?>" style="width:130px;">Мэдээний архив</a></li>
                 <li><a style="width:150px;cursor:pointer;">Мэдээний ангилал</a>
-										<!--category-->
-										<ul id="categorylist">
-												<?php $paramCat = $sf_params->get('categoryRoute')?>
-												<?php $cats = GlobalTable::doFetchArray('Category', array('route', 'name'), array('limit'=>50));?>
-												<?php foreach ($cats as $cat):?>
-													<li>
-														<a href="<?php echo url_for('page/index?categoryRoute='.$cat['route'])?>" class="categoryDropdown <?php if($cat['route'] == $paramCat) echo 'current'?>">
-															<?php echo $cat['name']?>
-														</a>
-													</li>
-												<?php endforeach;?>
-										</ul>
-								</li>
-                <li style="float:right;">
-									<form action="<?php echo url_for('main/search')?>" id="searchForm" style="margin:6px 0 0 0;">
-										<input type="text" name="s" id="search" class="search" autocomplete="off" style="width:230px;height:24px;border:2px solid #e54a17;padding:0 5px;background:#dfdfdf;"
-											  value="<?php echo $sf_params->get('s') ? $sf_params->get('s') : 'Хайлт'?>"/>
-										<?php echo image_tag('icons/search-orange.png', array('style'=>'position:absolute;right:5px;top:5px;z-index:1;cursor:pointer;', 'onclick'=>'$("#searchForm").submit();'))?>
-										</form>
-								</li>
+					<!--category-->
+					<ul id="categorylist">
+						<?php $paramCat = $sf_params->get('categoryRoute')?>
+						<?php $cats = GlobalTable::doFetchArray('Category', array('route', 'name'), array('limit'=>50));?>
+						<?php foreach ($cats as $cat):?>
+							<li>
+								<a href="<?php echo url_for('page/index?categoryRoute='.$cat['route'])?>" class="categoryDropdown <?php if($cat['route'] == $paramCat) echo 'current'?>">
+									<?php echo $cat['name']?>
+								</a>
+							</li>
+						<?php endforeach;?>
+					</ul>
+				</li>
+				<li><a style="width:150px;cursor:pointer;">Бүгд</a></li>
+				<li><a style="width:150px;cursor:pointer;">Архив</a></li>				
             </ul>
             <br clear="all">
         </div><!--wrapper-->
     </div><!--mainmenu-->
 
-    <?php include_partial("partial/socialsFloating", array());?>
-    <?php include_partial("partial/bannerFloating", array());?>
+    <?php //include_partial("partial/socialsFloating", array());?>
+    <?php //include_partial("partial/bannerFloating", array());?>
 </div><!--header-->
 
 <script type="text/javascript">
