@@ -1,0 +1,12 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/07-Databases
+
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=localhost;dbname=nytimes
+      username: root
+      password:
+      #username: root
+      #password: <;(w3iF?Mc75!Tg

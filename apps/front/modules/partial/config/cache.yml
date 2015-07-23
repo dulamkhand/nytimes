@@ -1,0 +1,20 @@
+_bannerFloating:
+  enabled:     false
+
+_bannerHome:
+  enabled:     false
+  
+_bannerMiddle:
+  enabled:     false
+
+_footer:
+  enabled:     false
+  
+_header:
+  enabled:     false
+  
+_rightside:
+  enabled:     false
+  
+_socialsFloating:
+  enabled:     false

@@ -1,0 +1,47 @@
+<?php
+
+class myUser extends sfBasicSecurityUser
+{
+    public function signIn($admin)
+    {
+        $this->setAuthenticated(true);
+        
+        // module credentials
+        $rss = explode(";", $admin->getModPermissions());
+        foreach ($rss as $rs){
+            $this->addCredential($rs);  
+        }
+        $this->setAttribute('id', $admin->getId());
+        $this->setAttribute('email', $admin->getEmail());
+        
+        $admin->setLoggedAt(date('Y-m-d H:i:s'));
+        $admin->save();
+    }
+  
+    public function signOut()
+    {
+        $this->clearCredentials();
+        $this->setAuthenticated(false);
+    }
+  
+    public function getId()
+    {
+       return $this->getAttribute('id', 0);
+    }
+
+    public function getEmail()
+    {
+        return $this->getAttribute('email', '');
+    }
+    
+    public function getCatPermissions()
+    {
+        return $this->getAttribute('catPermissions', array());
+    }
+    
+    public function getInstance()
+    {
+       return Doctrine::getTable('Admin')->find($this->getId());
+    }
+
+}

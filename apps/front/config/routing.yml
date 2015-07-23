@@ -1,0 +1,58 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# main
+search:
+  url:   /search.htm
+  param: { module: main, action: search }
+about:
+  url:   /about.htm
+  param: { module: main, action: about }
+advertisement:
+  url:   /advertisement.htm
+  param: { module: main, action: advertisement }
+contact:
+  url:   /contact.htm
+  param: { module: main, action: contact }
+404:
+  url:   /404.htm
+  param: { module: main, action: 404 }
+
+# page
+index:
+  url:   /c/:categoryRoute.htm
+  param: { module: page, action: index }
+  
+show:
+  url:   /t/:route.htm
+  param: { module: page, action: show }
+
+byNbView:
+  url:   /byNbView.htm
+  param: { module: page, action: byNbView }
+  
+byNbComment:
+  url:   /byNbComment.htm
+  param: { module: page, action: byNbComment }
+  
+archive:
+  url:   /archive.htm
+  param: { module: page, action: archive }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: main, action: home }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module.htm
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
+  
+default_error:
+  url:   /*
+  param: { module: main, action: 404 }

@@ -1,0 +1,14 @@
+2007-11-11  phpwebcounter-1.0
+
+	* Stable version.
+	* Added a banner to point to project site.
+	* Improved the README. 
+
+2007-11-03  phpwebcounter-0.2
+
+	* Initial public version.
+	* Split the main code generating an "engine" and a configuration file. 
+
+2006-10-30  phpwebcounter-0.1
+
+	* Initial internal version.

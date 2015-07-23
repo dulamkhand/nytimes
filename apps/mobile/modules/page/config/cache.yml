@@ -1,0 +1,17 @@
+_archive:
+  enabled:     true
+
+_box:
+  enabled:     true
+  
+_boxSmall:
+  enabled:     true
+  
+_random:
+  enabled:     true
+  
+_share:
+  enabled:     true
+  
+_similars:
+  enabled:     true

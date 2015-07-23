@@ -1,0 +1,150 @@
+	phpwebcounter - A simple and light web hits counter
+
+  Copyright (C) 2006-2007 Andre Bertelli Araujo, Joao Eriberto Mota Filho,
+			  Marcos Patricio dos Santos.
+
+  phpwebcounter is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+Comments are welcome.
+
+    PHP developers:
+
+	- Andre Bertelli Araujo <bertelli.andre@gmail.com>    
+	- Marcos Patricio dos Santos <marpasan@ig.com.br>
+	
+    Install, release, documentation, Debian maintainer and cosmetics:
+    	
+	- Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+
+
+1. INSTALL
+----------
+
+  - FOR LINUX SYSTEMS -
+
+tar -xvzf phpwebcounter-x.y.tar.gz
+cd phpwebcounter
+
+Edit the "Makefile" file, if needed.
+
+Run "# make install".
+
+
+  - FOR WEBHOSTINGS -
+
+Copy the files phpwebcounter.php, phpwebcounter.config.php and images directory
+to your web directory and adjust the configuration file. You will need to modify
+$path_hits_file and $path_images. Don't forget to change the include line in the
+top of the phpwebcounter.php file. Example:
+
+  $path_hits_file='.';
+  $path_images='./images/basic1';
+  
+  include("phpwebcounter.config.php");
+
+
+
+2. CONFIGURATION AND TEST
+-------------------------
+
+Edit the file /etc/phpwebcounter/phpwebcounter.config.php and set the correct
+values to variables. You can use default options.
+
+The first test can be made using this URL:
+
+    http://<ip_or_URL>/phpwebcounter/phpwebcounter.php
+
+
+
+3. USING
+--------
+
+This program requires an web server and PHP installed.
+
+You need to use .php or .phtml extensions in page name. If you have an
+index.html change this name to index.php (the pure html codes will work
+correctly).
+
+If you want to use the counter installed in another machine, insert it into the
+HTML source code:
+
+    <?php require("http://server_ip_or_url/phpwebcounter/phpwebcounter.php"); ?>
+    
+If you put the phpwebcounter directory in your site directory, you can use it:
+
+    <?php require("phpwebcounter/phpwebcounter.php"); ?>
+
+To change counter value edit hits file (see $path_hits_file in config file). 
+
+
+
+4. PHP5 ISSUES
+--------------
+
+The PHP5 configuration file prevents, by default, remote requests using
+"require" or "include" methods. It will block the use of the counter installed
+in remote servers. To change it, you can:
+
+    - Put the "phpwebcounter.php" file and "images" directory in your local
+      www folder;
+    
+    - Edit the php.ini file, available in /etc/php5 directory, and change
+      "allow_url_include = Off" to "allow_url_include = On". IT ISN'T
+      RECOMMENDED BY SECURITY ISSUES. PLEASE, CONSIDER DON'T MAKE THIS.
+
+
+
+5. DO YOU NEED MORE COUNTERS?
+-----------------------------
+
+If you need to use more counters on same machine:
+
+# cd /var/www/phpwebcounter
+# cp -a phpwebcounter.php phpwebcounter2.php
+
+Edit phpwebcounter2.php and change $webcounter_id value.
+Insert it into the HTML source code:
+
+<?php require("phpwebcounter/phpwebcounter2.php"); ?>
+
+
+
+6. DEMO SITE
+------------
+
+You can see PHP Web Counter running at
+http://phpwebcounter.sf.net.
+
+
+
+7. SOURCEFORGE.NET SITES
+------------------------
+
+To put PHP Web Counter in web sites in SourceForge.Net, you must create a
+directory into /tmp/persistent (in SF.Net),  via shell access (SSH) to
+shell.sf.net. You must set 755 permission to this directory. The directory
+group must be the same name of your project. A tip: the /tmp/persistent
+directory in SF.Net don't allow "ls" command.
+
+To more details, see:
+
+http://sourceforge.net/docman/display_doc.php?docid=4297&group_id=1#environment
+
+
+
+8. MORE INFORMATIONS
+--------------------
+
+Please see http://phpwebcounter.sf.net.

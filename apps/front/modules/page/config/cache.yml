@@ -1,0 +1,29 @@
+_archive:
+  enabled:     false
+
+_box:
+  enabled:     false
+  
+_boxSmall:
+  enabled:     false
+  
+_featured:
+  enabled:     false
+  
+_icons:
+  enabled:     false
+  
+_prev_next:
+  enabled:     false
+
+_random:
+  enabled:     false
+  
+_share:
+  enabled:     false
+  
+_similars:
+  enabled:     false
+
+_top5:
+  enabled:     false
