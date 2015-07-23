@@ -25,7 +25,7 @@ abstract class BaseCommentForm extends BaseFormDoctrine
       'name'        => new sfWidgetFormInputText(),
       'text'        => new sfWidgetFormTextarea(),
       'nb_love'     => new sfWidgetFormInputText(),
-      'is_active'   => new sfWidgetFormInputCheckbox(),
+      'is_active'   => new sfWidgetFormInputText(),
       'nb_like'     => new sfWidgetFormInputText(),
       'nb_unlike'   => new sfWidgetFormInputText(),
     ));
@@ -41,7 +41,7 @@ abstract class BaseCommentForm extends BaseFormDoctrine
       'name'        => new sfValidatorString(array('max_length' => 255)),
       'text'        => new sfValidatorString(),
       'nb_love'     => new sfValidatorInteger(array('required' => false)),
-      'is_active'   => new sfValidatorBoolean(),
+      'is_active'   => new sfValidatorInteger(),
       'nb_like'     => new sfValidatorInteger(array('required' => false)),
       'nb_unlike'   => new sfValidatorInteger(array('required' => false)),
     ));

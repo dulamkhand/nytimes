@@ -11,7 +11,7 @@ Doctrine_Manager::getInstance()->bindComponent('Category', 'doctrine');
  * @property string $name
  * @property string $route
  * @property integer $sort
- * @property boolean $is_active
+ * @property integer $is_active
  * @property timestamp $updated_at
  * @property timestamp $created_at
  * @property integer $created_aid
@@ -24,7 +24,7 @@ Doctrine_Manager::getInstance()->bindComponent('Category', 'doctrine');
  * @method string              getName()            Returns the current record's "name" value
  * @method string              getRoute()           Returns the current record's "route" value
  * @method integer             getSort()            Returns the current record's "sort" value
- * @method boolean             getIsActive()        Returns the current record's "is_active" value
+ * @method integer             getIsActive()        Returns the current record's "is_active" value
  * @method timestamp           getUpdatedAt()       Returns the current record's "updated_at" value
  * @method timestamp           getCreatedAt()       Returns the current record's "created_at" value
  * @method integer             getCreatedAid()      Returns the current record's "created_aid" value
@@ -90,13 +90,14 @@ abstract class BaseCategory extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 4,
              ));
-        $this->hasColumn('is_active', 'boolean', null, array(
-             'type' => 'boolean',
+        $this->hasColumn('is_active', 'integer', 1, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
+             'length' => 1,
              ));
         $this->hasColumn('updated_at', 'timestamp', 25, array(
              'type' => 'timestamp',

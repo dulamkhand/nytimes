@@ -51,14 +51,14 @@ Admin:
       notnull: true
       autoincrement: false
     is_active:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
     is_featured:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
@@ -94,15 +94,6 @@ Admin:
       notnull: true
       autoincrement: false
   relations:
-    Banner:
-      local: id
-      foreign: created_aid
-      type: many
-    Banner_2:
-      class: Banner
-      local: id
-      foreign: updated_aid
-      type: many
     Category:
       local: id
       foreign: created_aid
@@ -157,24 +148,6 @@ Admin:
       local: id
       foreign: updated_aid
       type: many
-    Poll:
-      local: id
-      foreign: created_aid
-      type: many
-    Poll_2:
-      class: Poll
-      local: id
-      foreign: updated_aid
-      type: many
-    PollOption:
-      local: id
-      foreign: created_aid
-      type: many
-    PollOption_2:
-      class: PollOption
-      local: id
-      foreign: updated_aid
-      type: many
 Banner:
   connection: doctrine
   tableName: banner
@@ -221,7 +194,7 @@ Banner:
       notnull: true
       autoincrement: false
     target:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
@@ -263,14 +236,14 @@ Banner:
       notnull: true
       autoincrement: false
     is_active:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
     is_featured:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
@@ -305,16 +278,6 @@ Banner:
       primary: false
       notnull: true
       autoincrement: false
-  relations:
-    Admin:
-      local: created_aid
-      foreign: id
-      type: one
-    Admin_2:
-      class: Admin
-      local: updated_aid
-      foreign: id
-      type: one
 Category:
   connection: doctrine
   tableName: category
@@ -347,7 +310,7 @@ Category:
       notnull: true
       autoincrement: false
     is_active:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
@@ -492,7 +455,7 @@ Client:
       notnull: true
       autoincrement: false
     is_active:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
@@ -620,7 +583,7 @@ Comment:
       notnull: true
       autoincrement: false
     is_active:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
@@ -718,35 +681,35 @@ Content:
       notnull: true
       autoincrement: false
     is_active:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
     is_new:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
     is_top:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
     is_featured:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
     ask18:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
@@ -866,28 +829,6 @@ Feedback:
       primary: false
       notnull: true
       autoincrement: false
-    updated_at:
-      type: timestamp(25)
-      fixed: false
-      unsigned: false
-      primary: false
-      default: '0000-00-00 00:00:00'
-      notnull: true
-      autoincrement: false
-    created_aid:
-      type: integer(4)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false
-    updated_aid:
-      type: integer(4)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false
 Image:
   connection: doctrine
   tableName: image
@@ -927,7 +868,7 @@ Image:
       notnull: true
       autoincrement: false
     iscover:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
@@ -978,7 +919,7 @@ Image:
       local: created_aid
       foreign: id
       type: one
-    Admin_2:
+    Admin_3:
       class: Admin
       local: updated_aid
       foreign: id
@@ -1036,6 +977,44 @@ Love:
       primary: false
       notnull: true
       autoincrement: false
+Menu:
+  connection: doctrine
+  tableName: menu
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    name:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    is_active:
+      type: integer(1)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
 Page:
   connection: doctrine
   tableName: page
@@ -1082,7 +1061,7 @@ Page:
       notnull: true
       autoincrement: false
     is_active:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
@@ -1173,14 +1152,14 @@ Poll:
       notnull: true
       autoincrement: false
     options_addable:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
     multiple_choice:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
@@ -1194,14 +1173,14 @@ Poll:
       notnull: true
       autoincrement: false
     is_active:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
     is_featured:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
@@ -1236,20 +1215,6 @@ Poll:
       primary: false
       notnull: true
       autoincrement: false
-  relations:
-    Admin:
-      local: created_aid
-      foreign: id
-      type: one
-    Admin_2:
-      class: Admin
-      local: updated_aid
-      foreign: id
-      type: one
-    PollOption:
-      local: id
-      foreign: poll_id
-      type: many
 PollOption:
   connection: doctrine
   tableName: poll_option
@@ -1303,7 +1268,7 @@ PollOption:
       notnull: true
       autoincrement: false
     is_active:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false
@@ -1345,24 +1310,6 @@ PollOption:
       primary: false
       notnull: true
       autoincrement: false
-  relations:
-    Admin:
-      local: created_aid
-      foreign: id
-      type: one
-    Admin_2:
-      class: Admin
-      local: updated_aid
-      foreign: id
-      type: one
-    Poll:
-      local: poll_id
-      foreign: id
-      type: one
-    PollOptionVote:
-      local: id
-      foreign: option_id
-      type: many
 PollOptionVote:
   connection: doctrine
   tableName: poll_option_vote
@@ -1401,11 +1348,6 @@ PollOptionVote:
       primary: false
       notnull: true
       autoincrement: false
-  relations:
-    PollOption:
-      local: option_id
-      foreign: id
-      type: one
 Subscriber:
   connection: doctrine
   tableName: subscriber
@@ -1498,7 +1440,7 @@ User:
       notnull: true
       autoincrement: false
     is_active:
-      type: boolean
+      type: integer(1)
       fixed: false
       unsigned: false
       primary: false

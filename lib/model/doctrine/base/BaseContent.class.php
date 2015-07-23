@@ -19,11 +19,11 @@ Doctrine_Manager::getInstance()->bindComponent('Content', 'doctrine');
  * @property integer $nb_views
  * @property integer $nb_love
  * @property integer $nb_comment
- * @property boolean $is_active
- * @property boolean $is_new
- * @property boolean $is_top
- * @property boolean $is_featured
- * @property boolean $ask18
+ * @property integer $is_active
+ * @property integer $is_new
+ * @property integer $is_top
+ * @property integer $is_featured
+ * @property integer $ask18
  * @property timestamp $post_at
  * @property timestamp $created_at
  * @property timestamp $updated_at
@@ -47,11 +47,11 @@ Doctrine_Manager::getInstance()->bindComponent('Content', 'doctrine');
  * @method integer             getNbViews()         Returns the current record's "nb_views" value
  * @method integer             getNbLove()          Returns the current record's "nb_love" value
  * @method integer             getNbComment()       Returns the current record's "nb_comment" value
- * @method boolean             getIsActive()        Returns the current record's "is_active" value
- * @method boolean             getIsNew()           Returns the current record's "is_new" value
- * @method boolean             getIsTop()           Returns the current record's "is_top" value
- * @method boolean             getIsFeatured()      Returns the current record's "is_featured" value
- * @method boolean             getAsk18()           Returns the current record's "ask18" value
+ * @method integer             getIsActive()        Returns the current record's "is_active" value
+ * @method integer             getIsNew()           Returns the current record's "is_new" value
+ * @method integer             getIsTop()           Returns the current record's "is_top" value
+ * @method integer             getIsFeatured()      Returns the current record's "is_featured" value
+ * @method integer             getAsk18()           Returns the current record's "ask18" value
  * @method timestamp           getPostAt()          Returns the current record's "post_at" value
  * @method timestamp           getCreatedAt()       Returns the current record's "created_at" value
  * @method timestamp           getUpdatedAt()       Returns the current record's "updated_at" value
@@ -211,45 +211,50 @@ abstract class BaseContent extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 4,
              ));
-        $this->hasColumn('is_active', 'boolean', null, array(
-             'type' => 'boolean',
+        $this->hasColumn('is_active', 'integer', 1, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
+             'length' => 1,
              ));
-        $this->hasColumn('is_new', 'boolean', null, array(
-             'type' => 'boolean',
+        $this->hasColumn('is_new', 'integer', 1, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
+             'length' => 1,
              ));
-        $this->hasColumn('is_top', 'boolean', null, array(
-             'type' => 'boolean',
+        $this->hasColumn('is_top', 'integer', 1, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
+             'length' => 1,
              ));
-        $this->hasColumn('is_featured', 'boolean', null, array(
-             'type' => 'boolean',
+        $this->hasColumn('is_featured', 'integer', 1, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
+             'length' => 1,
              ));
-        $this->hasColumn('ask18', 'boolean', null, array(
-             'type' => 'boolean',
+        $this->hasColumn('ask18', 'integer', 1, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
+             'length' => 1,
              ));
         $this->hasColumn('post_at', 'timestamp', 25, array(
              'type' => 'timestamp',

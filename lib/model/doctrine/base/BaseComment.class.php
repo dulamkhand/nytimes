@@ -16,7 +16,8 @@ Doctrine_Manager::getInstance()->bindComponent('Comment', 'doctrine');
  * @property string $ip_address
  * @property string $name
  * @property string $text
- * @property boolean $is_active
+ * @property integer $nb_love
+ * @property integer $is_active
  * @property integer $nb_like
  * @property integer $nb_unlike
  * 
@@ -29,7 +30,8 @@ Doctrine_Manager::getInstance()->bindComponent('Comment', 'doctrine');
  * @method string    getIpAddress()   Returns the current record's "ip_address" value
  * @method string    getName()        Returns the current record's "name" value
  * @method string    getText()        Returns the current record's "text" value
- * @method boolean   getIsActive()    Returns the current record's "is_active" value
+ * @method integer   getNbLove()      Returns the current record's "nb_love" value
+ * @method integer   getIsActive()    Returns the current record's "is_active" value
  * @method integer   getNbLike()      Returns the current record's "nb_like" value
  * @method integer   getNbUnlike()    Returns the current record's "nb_unlike" value
  * @method Comment   setId()          Sets the current record's "id" value
@@ -41,6 +43,7 @@ Doctrine_Manager::getInstance()->bindComponent('Comment', 'doctrine');
  * @method Comment   setIpAddress()   Sets the current record's "ip_address" value
  * @method Comment   setName()        Sets the current record's "name" value
  * @method Comment   setText()        Sets the current record's "text" value
+ * @method Comment   setNbLove()      Sets the current record's "nb_love" value
  * @method Comment   setIsActive()    Sets the current record's "is_active" value
  * @method Comment   setNbLike()      Sets the current record's "nb_like" value
  * @method Comment   setNbUnlike()    Sets the current record's "nb_unlike" value
@@ -135,13 +138,24 @@ abstract class BaseComment extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => '',
              ));
-        $this->hasColumn('is_active', 'boolean', null, array(
-             'type' => 'boolean',
+        $this->hasColumn('nb_love', 'integer', 4, array(
+             'type' => 'integer',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'default' => '0',
+             'notnull' => true,
+             'autoincrement' => false,
+             'length' => 4,
+             ));
+        $this->hasColumn('is_active', 'integer', 1, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
+             'length' => 1,
              ));
         $this->hasColumn('nb_like', 'integer', 4, array(
              'type' => 'integer',

@@ -14,8 +14,8 @@ Doctrine_Manager::getInstance()->bindComponent('Admin', 'doctrine');
  * @property string $cat_permissions
  * @property timestamp $logged_at
  * @property integer $sort
- * @property boolean $is_active
- * @property boolean $is_featured
+ * @property integer $is_active
+ * @property integer $is_featured
  * @property timestamp $created_at
  * @property timestamp $updated_at
  * @property integer $created_aid
@@ -38,7 +38,6 @@ Doctrine_Manager::getInstance()->bindComponent('Admin', 'doctrine');
  * @property Doctrine_Collection $Poll_2
  * @property Doctrine_Collection $PollOption
  * @property Doctrine_Collection $PollOption_3
- * @property Doctrine_Collection $PollOption_2
  * 
  * @method integer             getId()                Returns the current record's "id" value
  * @method string              getEmail()             Returns the current record's "email" value
@@ -47,8 +46,8 @@ Doctrine_Manager::getInstance()->bindComponent('Admin', 'doctrine');
  * @method string              getCatPermissions()    Returns the current record's "cat_permissions" value
  * @method timestamp           getLoggedAt()          Returns the current record's "logged_at" value
  * @method integer             getSort()              Returns the current record's "sort" value
- * @method boolean             getIsActive()          Returns the current record's "is_active" value
- * @method boolean             getIsFeatured()        Returns the current record's "is_featured" value
+ * @method integer             getIsActive()          Returns the current record's "is_active" value
+ * @method integer             getIsFeatured()        Returns the current record's "is_featured" value
  * @method timestamp           getCreatedAt()         Returns the current record's "created_at" value
  * @method timestamp           getUpdatedAt()         Returns the current record's "updated_at" value
  * @method integer             getCreatedAid()        Returns the current record's "created_aid" value
@@ -71,7 +70,6 @@ Doctrine_Manager::getInstance()->bindComponent('Admin', 'doctrine');
  * @method Doctrine_Collection getPoll2()             Returns the current record's "Poll_2" collection
  * @method Doctrine_Collection getPollOption()        Returns the current record's "PollOption" collection
  * @method Doctrine_Collection getPollOption3()       Returns the current record's "PollOption_3" collection
- * @method Doctrine_Collection getPollOption2()       Returns the current record's "PollOption_2" collection
  * @method Admin               setId()                Sets the current record's "id" value
  * @method Admin               setEmail()             Sets the current record's "email" value
  * @method Admin               setPassword()          Sets the current record's "password" value
@@ -103,7 +101,6 @@ Doctrine_Manager::getInstance()->bindComponent('Admin', 'doctrine');
  * @method Admin               setPoll2()             Sets the current record's "Poll_2" collection
  * @method Admin               setPollOption()        Sets the current record's "PollOption" collection
  * @method Admin               setPollOption3()       Sets the current record's "PollOption_3" collection
- * @method Admin               setPollOption2()       Sets the current record's "PollOption_2" collection
  * 
  * @package    imdb
  * @subpackage model
@@ -177,21 +174,23 @@ abstract class BaseAdmin extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 4,
              ));
-        $this->hasColumn('is_active', 'boolean', null, array(
-             'type' => 'boolean',
+        $this->hasColumn('is_active', 'integer', 1, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
+             'length' => 1,
              ));
-        $this->hasColumn('is_featured', 'boolean', null, array(
-             'type' => 'boolean',
+        $this->hasColumn('is_featured', 'integer', 1, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
+             'length' => 1,
              ));
         $this->hasColumn('created_at', 'timestamp', 25, array(
              'type' => 'timestamp',
@@ -237,11 +236,11 @@ abstract class BaseAdmin extends sfDoctrineRecord
         parent::setUp();
         $this->hasMany('Banner', array(
              'local' => 'id',
-             'foreign' => 'created_aid'));
+             'foreign' => 'updated_aid'));
 
         $this->hasMany('Banner as Banner_2', array(
              'local' => 'id',
-             'foreign' => 'updated_aid'));
+             'foreign' => 'created_aid'));
 
         $this->hasMany('Category', array(
              'local' => 'id',
@@ -293,22 +292,18 @@ abstract class BaseAdmin extends sfDoctrineRecord
 
         $this->hasMany('Poll', array(
              'local' => 'id',
-             'foreign' => 'created_aid'));
+             'foreign' => 'updated_aid'));
 
         $this->hasMany('Poll as Poll_2', array(
              'local' => 'id',
-             'foreign' => 'updated_aid'));
+             'foreign' => 'created_aid'));
 
         $this->hasMany('PollOption', array(
              'local' => 'id',
-             'foreign' => 'created_aid'));
+             'foreign' => 'updated_aid'));
 
         $this->hasMany('PollOption as PollOption_3', array(
              'local' => 'id',
              'foreign' => 'created_aid'));
-
-        $this->hasMany('PollOption as PollOption_2', array(
-             'local' => 'id',
-             'foreign' => 'updated_aid'));
     }
 }

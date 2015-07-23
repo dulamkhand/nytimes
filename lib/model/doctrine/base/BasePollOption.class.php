@@ -13,7 +13,7 @@ Doctrine_Manager::getInstance()->bindComponent('PollOption', 'doctrine');
  * @property integer $nb_vote
  * @property integer $user_id
  * @property string $ip
- * @property boolean $is_active
+ * @property integer $is_active
  * @property integer $sort
  * @property timestamp $created_at
  * @property timestamp $updated_at
@@ -31,7 +31,7 @@ Doctrine_Manager::getInstance()->bindComponent('PollOption', 'doctrine');
  * @method integer             getNbVote()         Returns the current record's "nb_vote" value
  * @method integer             getUserId()         Returns the current record's "user_id" value
  * @method string              getIp()             Returns the current record's "ip" value
- * @method boolean             getIsActive()       Returns the current record's "is_active" value
+ * @method integer             getIsActive()       Returns the current record's "is_active" value
  * @method integer             getSort()           Returns the current record's "sort" value
  * @method timestamp           getCreatedAt()      Returns the current record's "created_at" value
  * @method timestamp           getUpdatedAt()      Returns the current record's "updated_at" value
@@ -123,13 +123,14 @@ abstract class BasePollOption extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => 50,
              ));
-        $this->hasColumn('is_active', 'boolean', null, array(
-             'type' => 'boolean',
+        $this->hasColumn('is_active', 'integer', 1, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
+             'length' => 1,
              ));
         $this->hasColumn('sort', 'integer', 4, array(
              'type' => 'integer',

@@ -12,7 +12,7 @@ Doctrine_Manager::getInstance()->bindComponent('Image', 'doctrine');
  * @property string $folder
  * @property string $filename
  * @property string $description
- * @property boolean $iscover
+ * @property integer $iscover
  * @property integer $sort
  * @property timestamp $created_at
  * @property timestamp $updated_at
@@ -21,13 +21,14 @@ Doctrine_Manager::getInstance()->bindComponent('Image', 'doctrine');
  * @property Admin $Admin
  * @property Content $Content
  * @property Admin $Admin_2
+ * @property Admin $Admin_3
  * 
  * @method integer   getId()          Returns the current record's "id" value
  * @method integer   getContentId()   Returns the current record's "content_id" value
  * @method string    getFolder()      Returns the current record's "folder" value
  * @method string    getFilename()    Returns the current record's "filename" value
  * @method string    getDescription() Returns the current record's "description" value
- * @method boolean   getIscover()     Returns the current record's "iscover" value
+ * @method integer   getIscover()     Returns the current record's "iscover" value
  * @method integer   getSort()        Returns the current record's "sort" value
  * @method timestamp getCreatedAt()   Returns the current record's "created_at" value
  * @method timestamp getUpdatedAt()   Returns the current record's "updated_at" value
@@ -36,6 +37,7 @@ Doctrine_Manager::getInstance()->bindComponent('Image', 'doctrine');
  * @method Admin     getAdmin()       Returns the current record's "Admin" value
  * @method Content   getContent()     Returns the current record's "Content" value
  * @method Admin     getAdmin2()      Returns the current record's "Admin_2" value
+ * @method Admin     getAdmin3()      Returns the current record's "Admin_3" value
  * @method Image     setId()          Sets the current record's "id" value
  * @method Image     setContentId()   Sets the current record's "content_id" value
  * @method Image     setFolder()      Sets the current record's "folder" value
@@ -50,6 +52,7 @@ Doctrine_Manager::getInstance()->bindComponent('Image', 'doctrine');
  * @method Image     setAdmin()       Sets the current record's "Admin" value
  * @method Image     setContent()     Sets the current record's "Content" value
  * @method Image     setAdmin2()      Sets the current record's "Admin_2" value
+ * @method Image     setAdmin3()      Sets the current record's "Admin_3" value
  * 
  * @package    imdb
  * @subpackage model
@@ -105,13 +108,14 @@ abstract class BaseImage extends sfDoctrineRecord
              'autoincrement' => false,
              'length' => '',
              ));
-        $this->hasColumn('iscover', 'boolean', null, array(
-             'type' => 'boolean',
+        $this->hasColumn('iscover', 'integer', 1, array(
+             'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
              'primary' => false,
              'notnull' => true,
              'autoincrement' => false,
+             'length' => 1,
              ));
         $this->hasColumn('sort', 'integer', 4, array(
              'type' => 'integer',
@@ -173,6 +177,10 @@ abstract class BaseImage extends sfDoctrineRecord
              'foreign' => 'id'));
 
         $this->hasOne('Admin as Admin_2', array(
+             'local' => 'updated_aid',
+             'foreign' => 'id'));
+
+        $this->hasOne('Admin as Admin_3', array(
              'local' => 'updated_aid',
              'foreign' => 'id'));
     }
