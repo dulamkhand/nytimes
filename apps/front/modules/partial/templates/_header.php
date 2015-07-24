@@ -45,7 +45,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
    	    <div class="wrapper">
   		      <ul id="mainmenu-ul">	
    				 			<?php $cat_param = $sf_params->get('categoryRoute')?>
-							  <?php $cats = GlobalTable::doFetchArray('Category', array('route', 'name'), array('limit'=>50));?>
+							  <?php $cats = GlobalTable::doFetchArray('Category', array('route', 'name'), array('limit'=>11));?>
 								<?php foreach ($cats as $cat):?>
 										<li>
 												<a href="<?php echo url_for('page/index?categoryRoute='.$cat['route'])?>" class=" <?php if($cat['route'] == $cat_param) echo 'current'?>">
