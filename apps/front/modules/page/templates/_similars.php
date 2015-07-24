@@ -9,7 +9,7 @@
                 <li>
                     <a href="<?php echo url_for('page/show?route='.$rs['route'])?>" 
                         style="margin:0 10px 0 0;float:left;width:160px;">
-                        <?php $cover = str_replace("t750-", "t240-", $rs['cover'])?>
+                        <?php $cover = str_replace("t600-", "t240-", $rs['cover'])?>
                         <?php echo image_tag($cover, array('style'=>'width:150px;height:110px;border-radius:4px;'))?>
                         <h3 style="line-height:24px;width:150px;">
                             <?php echo GlobalLib::clearOutput($rs['title'])?>

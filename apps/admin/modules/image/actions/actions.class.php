@@ -80,11 +80,11 @@ class imageActions extends sfActions
                   unlink($fullfolder.'/'.$image->getFilename()); // remove png from folder
                   $image->setFilename($new_filename);
               }
-              // create thumb 750, 240
-              GlobalLib::createThumbs($new_filename, $folder, array(750), false);
+              // create thumb 600, 240
+              GlobalLib::createThumbs($new_filename, $folder, array(600), false);
               GlobalLib::createThumbs($new_filename, $folder, array(240), true);
-              // create waterlink on 750
-              $filepath = $fullfolder.'/t750-'.$new_filename;
+              // create waterlink on 600
+              $filepath = $fullfolder.'/t600-'.$new_filename;
               $img = new sfImage($filepath);
               $img->overlay(new sfImage(sfConfig::get('sf_web_dir').'/images/watermark.png'), 'bottom-right'); // TODO: png + png white
               $img->saveAs($filepath);
@@ -95,7 +95,7 @@ class imageActions extends sfActions
           if($image->getIsCover()) {
               $obj = Doctrine::getTable('Content')->find($image->getContentId());
               if($obj){
-                  $obj->setCover('/u/'.$image->getFolder().'/t750-'.$image->getFilename());
+                  $obj->setCover('/u/'.$image->getFolder().'/t600-'.$image->getFilename());
                   $obj->save();	  
               }
           }

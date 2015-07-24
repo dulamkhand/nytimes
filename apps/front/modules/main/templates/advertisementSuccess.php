@@ -8,7 +8,7 @@
     <br clear="all">
 <?php endif?>
 
-<?php if($page->getImage()) echo image_tag('/u/page/'.$page->getImage(), array('title'=>$page, 'alt'=>$page, 'style'=>'max-width:750px;'))?>
+<?php if($page->getImage()) echo image_tag('/u/page/'.$page->getImage(), array('title'=>$page, 'alt'=>$page, 'style'=>'max-width:600px;'))?>
 <br clear="all">
 
 <?php if($page->getContent()):?>

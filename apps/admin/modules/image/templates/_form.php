@@ -45,7 +45,7 @@
   </tbody>
 </table>
 
-<div style="width:750px;float:left;line-height:30px;">
+<div style="width:600px;float:left;line-height:30px;">
     <a href="<?php echo url_for('content/edit?id='.$content->getId())?>" title="Edit content">[edit content]</a>
     <h1><?php echo $content?></h1>
     <?php echo GlobalLib::clearOutput($content->getIntro())?>
@@ -55,7 +55,7 @@
     <?php foreach ($images as $image) {?>
         <a href="<?php echo url_for('image/edit?id='.$image['id'])?>" title="Edit image">[edit image]</a> &nbsp; 
         <a onclick="return confirm('Are you sure?')" href="<?php echo url_for('image/delete?id='.$image['id'])?>" title="Delete">[delete image]</a><br>
-        <?php echo image_tag('/u/'.$image['folder'].'/t750-'.$image['filename'], array('style'=>'margin:0 0 5px 0'));?><br>
+        <?php echo image_tag('/u/'.$image['folder'].'/t600-'.$image['filename'], array('style'=>'margin:0 0 5px 0'));?><br>
         <?php echo GlobalLib::clearOutput($image['description']);?>
         <br clear="all">
         <hr style="border:0;border-bottom:1px dashed #dedede;margin:7px 0;">

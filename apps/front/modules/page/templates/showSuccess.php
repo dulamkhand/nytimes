@@ -39,7 +39,7 @@
                   array('contentId'=>$rs->getId(), 'isActive'=>'all', 'orderBy'=>'sort ASC', 'limit'=>100));
         $total = sizeof($images);
         foreach ($images as $image) {
-            echo image_tag('/u/'.$image['folder'].'/t750-'.$image['filename'], array('style'=>'max-width:720px;margin:10px 0;'));
+            echo image_tag('/u/'.$image['folder'].'/t600-'.$image['filename'], array('style'=>'max-width:720px;margin:10px 0;'));
             echo '<br clear="all">';
             echo GlobalLib::clearOutput($image['description']);
             if(++$i < $total) echo '<hr style="border:0;border-bottom:1px dotted #ccc;margin:7px 0;">';

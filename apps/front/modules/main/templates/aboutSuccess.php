@@ -12,7 +12,7 @@
 
 <?php 
 if($page->getImage()) {
-    echo image_tag('/u/page/'.$page->getImage(), array('title'=>$page, 'alt'=>$page, 'style'=>'max-width:750px;'));
+    echo image_tag('/u/page/'.$page->getImage(), array('title'=>$page, 'alt'=>$page, 'style'=>'max-width:600px;'));
     echo '<br clear="all">';
 }
 ?>

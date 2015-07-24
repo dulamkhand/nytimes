@@ -1,7 +1,7 @@
 *, html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,
 b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,
 hgroup,menu,nav,section,summary,time,mark,audio,a 
-{font-family:Roboto Condensed;line-height:20px;font-size:16px;color:#222;margin:0;padding:0;border:0;letter-spacing:1px;
+{font-family:Georgia;line-height:20px;font-size:16px;color:#222;margin:0;padding:0;border:0;letter-spacing:1px;
 outline:0;background:none;text-rendering:optimizelegibility;position:relative;font-weight:normal;text-align:left;
 -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: -moz-none;-moz-user-select: none;-ms-user-select: none;user-select: none;
 }
@@ -9,8 +9,9 @@ outline:0;background:none;text-rendering:optimizelegibility;position:relative;fo
 /* LAYOUT */
 #header{width:100%;height:150px;position:relative;background:#fff;}
 body {background:#fff;position:relative;}
-.wrapper{margin:0 auto;width:1000px;background:transparent;position:relative;}
+.wrapper{margin:0 auto;width:1100px;background:transparent;position:relative;}
 #center{float:left;width:750px;margin:8px 0 0 0;z-index:1;}
+#leftside{float:left;width:235px;margin:7px 10px 0 0;min-height:600px;z-index:1;}
 #rightside{float:right;width:240px;margin:7px 0 0 10px;min-height:600px;z-index:1;
 @media (min-width: 1100px) {
 	bottom: 0;
@@ -50,11 +51,11 @@ select optgroup{text-transform:uppercase;padding:0;}
 select option{text-transform:;padding:2px 0px;background:#FFF;}
 
 /* CUSTOM */
-h1, a.h1{font-size:20px;text-transform:uppercase;color:#3a3b3b;line-height:28px;font-weight:normal;
-         letter-spacing:-1px;margin:0 0 10px 0;}
-h2, a.h2{font-size:18px;text-transform:uppercase;color:#fff;line-height:23px;font-weight:normal;
+h1, a.h1{font-size:12px;text-transform:uppercase;color:#3a3b3b;line-height:18px;font-weight:normal;
+         letter-spacing:0px;margin:0 0 10px 0;}
+h2, a.h2{font-size:16px;text-transform:uppercase;color:#fff;line-height:24px;font-weight:normal;
          letter-spacing:-1px;margin:0 0 5px 0;}
-h3, a.h3{font-size:16px;text-transform:uppercase;color:#3a3b3b;line-height:28px;font-weight:bold;
+h3, a.h3{font-size:14px;text-transform:uppercase;color:#3a3b3b;line-height:22px;font-weight:bold;
          letter-spacing:-1px;margin:0 0 10px 0;}
 
 cufon {height:17px!important;}
@@ -114,7 +115,8 @@ strong,b{font-weight:bold!important;}
 
 .bluring{opacity:0.1;}
 
-.box{width:750px;margin:0 0 20px 0;position:relative;background:#fff;z-index:1;}
+.box{width:600px;margin:0 0 20px 0;position:relative;background:#fff;z-index:1;}
+.box-s{width:600px;margin:0 0 20px 0;position:relative;background:#fff;z-index:1;}
 
 .pager {margin:0 0 15px 0;padding:0;width:100%;float:left;}
 .pager a {float:left;margin:1px;padding:5px 12px;border:1px solid #0677cf;border-radius:2px;background:#fff;}

@@ -1,5 +1,5 @@
 <?php $host = sfConfig::get('app_host')?>
-<?php //$cover = str_replace("t750-", "t240-", $rs->getCover())?>
+<?php //$cover = str_replace("t600-", "t240-", $rs->getCover())?>
 <?php $cover = $rs->getCover()?>
 <?php $dim = getimagesize($host.$cover)?>
 <?php $height = intval(mb_strlen($rs->getTitle())*3/2) + $dim[1] + ($rs->getIntro() ? 100 : 10)?>

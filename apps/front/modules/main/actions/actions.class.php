@@ -23,6 +23,7 @@ class mainActions extends sfActions
         global $CONTENT_COLUMNS;
         $this->pager = Doctrine::getTable('Content')->getPager($CONTENT_COLUMNS,
                   array(), $request->getParameter('page'));
+        $this->setLayout('homeLayout');
     }
     
     public function executeSearch(sfWebRequest $request)

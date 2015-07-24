@@ -25,7 +25,7 @@
             <h1 style="line-height:24px;margin:0;padding:5px 10px;background:#fff;border-top:2px solid #0677cf;">
                 <?php echo $rs['title']?>
             </h1>
-            <?php $cover = str_replace("t750-", "t240-", $rs['cover'])?>
+            <?php $cover = str_replace("t600-", "t240-", $rs['cover'])?>
             <?php echo image_tag($cover, array('style'=>'max-width:240px;'))?>
         </a>
     <?php endforeach;?>

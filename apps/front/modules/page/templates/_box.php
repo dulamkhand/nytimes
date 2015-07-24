@@ -9,7 +9,7 @@
                   ? utf8_substr($rs->getIntro(), 0, 100).' ...' 
                   : $rs->getIntro());?>
     		</div>
-        <?php echo image_tag($rs->getCover(), array('style'=>'max-width:750px;'))?>
+        <?php echo image_tag($rs->getCover(), array('style'=>'max-width:600px;'))?>
     </a>
     <div style="position:absolute;bottom:0;left:0;height:12px;padding:6px 0;width:100%;background:rgba(0,0,0,0.5);">
         <span class="left c-fff timeago" style="margin:0 8px;"><?php echo time_ago($rs->getCreatedAt())?></span>
