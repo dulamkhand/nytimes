@@ -1,4 +1,4 @@
-<div class="left box" style="border-bottom:1px solid #ccc;">
+<div class="left box" style="border-bottom:1px dotted #dedede;">
     <a href="<?php echo url_for('page/show?route='.$rs->getRoute())?>" title="<?php echo GlobalLib::clearOutput($rs->getTitle())?>" style="display:block;">
         <h1 style="margin:0;font-weight:bold;letter-spacing:0px;padding:0 0 5px 0;">
             <?php echo GlobalLib::clearOutput($rs->getTitle())?>

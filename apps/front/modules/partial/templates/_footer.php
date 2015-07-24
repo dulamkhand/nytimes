@@ -12,10 +12,11 @@
 <?php include_partial("partial/clients", array());?>
 
 <div id="footer">
+	<div class="wrapper">
     <div class="left" style="margin:0 10px 0 0;">
-		<!--<a><img src="http://hitwebcounter.com/counter/counter.php?page=5945219&style=0038&nbdigits=5&type=page&initCount=50000" title="" alt="" border="0"></a>-->
-		<?php //echo hits_webcounter(0);?>
-	</div>
+				<!--<a><img src="http://hitwebcounter.com/counter/counter.php?page=5945219&style=0038&nbdigits=5&type=page&initCount=50000" title="" alt="" border="0"></a>-->
+				<?php //echo hits_webcounter(0);?>
+		</div>
     <div class="right" style="margin:0 10px 0 0;">
         <ul>
             <li class="left"><a href="<?php echo url_for('main/about')?>">Вэбийн тухай</a> &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
@@ -24,4 +25,5 @@
         </ul>
     </div>
     <br clear="all">
+  </div>
 </div>
