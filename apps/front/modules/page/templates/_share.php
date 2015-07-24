@@ -14,9 +14,9 @@
 <a target="_blank" title="Share on Twitter" 
     onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" 
     class="left" style="background:#3ccaeb;display:block;height:32px;width:160px;padding:2px 0 0 2px;border-radius:2px;margin:0 0 0 8px;" 
-    href="https://twitter.com/share?url=<?php echo $url?>&amp;via=baavar.mn&amp;text=<?php echo $title?>">
+    href="https://twitter.com/share?url=<?php echo $url?>&amp;via=<?php echo sfConfig::get('app_domain');?>&amp;text=<?php echo $title?>">
     <?php echo image_tag('icons/socials/ico-tw-30.png', array('class'=>'left'))?>
-	<?php  //$tmp = file_get_contents('https://cdn.api.twitter.com/1/urls/count.json?url='.$url.'&via=baavar.mn'); 
+	<?php  //$tmp = file_get_contents('https://cdn.api.twitter.com/1/urls/count.json?url='.$url.'&via='.sfConfig::get('app_domain')); 
 		//$tmp = explode('"count":', $tmp);
 		//$tmp = explode(',', $tmp[1]);
 	?>

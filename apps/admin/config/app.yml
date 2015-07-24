@@ -4,7 +4,7 @@
 # default values
 all:
   host: http://localhost/nytimes/web/
-  webname: baavar.mn | Өдөр тутмын вэб сэтгүүл
-  feedbackmail: info@baavar.mn
+  webname: Спорт мэдээ - Монголын болон Дэлхий дахины спортын мэдээ мэдээлэл
+  feedbackmail: batsukhd.mn@gmail.com
   pager: 20
   limit: 20

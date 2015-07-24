@@ -5,7 +5,7 @@
 				<?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>1000, 'height'=>150));?>
 		<?php endif?>
 		<div style="text-transform:uppercase;font-size:14px;text-align:center;margin:0 0 5px 0;">
-				Та сайтад тавигдсан мэдээллийг ашигласан тохиолдолд сайтын нэрийг заавал дурдана уу. www.baavar.mn
+				Та сайтад тавигдсан мэдээллийг ашигласан тохиолдолд сайтын нэрийг заавал дурдана уу. <?php echo sfConfig::get('app_domain_www')?>
 		</div>
 </div>
 

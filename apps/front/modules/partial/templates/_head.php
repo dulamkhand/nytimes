@@ -34,7 +34,7 @@
     });
     // redirect to mobile
     /* if (screen.width <= 800) {
-        window.location = "http://baavar.mn/m.php";
+        window.location = "http://<?php echo sfConfig::get('app_host')?>/m.php";
     }*/
     </script>
 </head>
