@@ -3,7 +3,7 @@
 
 # default values
 all:
-  host: http://baavar.mn/
+  host: http://localhost/nytimes/web/
   webname: baavar.mn | Өдөр тутмын вэб сэтгүүл
   feedbackmail: info@baavar.mn
   pager: 20

@@ -44,31 +44,23 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
         
        
         <br clear="all"> 	
-    </div><!--wrapper-->    
-    
+    </div><!--wrapper-->  
+      
+   	<!--menu-->
     <div id="mainmenu">
-        <div class="wrapper">
-            <ul id="mainmenu-ul">
-                <li><a href="<?php echo url_for('@homepage')?>" style="width:30px;">Нүүр</a></li>
-                <li><a href="<?php echo url_for('page/byNbView')?>" style="width:65px;">Их үзсэн</a></li>
-                <li><a href="<?php echo url_for('page/byNbComment')?>" style="width:130px;">Их сэтгэгдэлтэй</a></li>
-                <li><a href="<?php echo url_for('page/archive')?>" style="width:130px;">Мэдээний архив</a></li>
-                <li><a style="width:150px;cursor:pointer;">Мэдээний ангилал</a>
-					<!--category-->
-					<ul id="categorylist">
-						<?php $paramCat = $sf_params->get('categoryRoute')?>
-						<?php $cats = GlobalTable::doFetchArray('Category', array('route', 'name'), array('limit'=>50));?>
-						<?php foreach ($cats as $cat):?>
-							<li>
-								<a href="<?php echo url_for('page/index?categoryRoute='.$cat['route'])?>" class="categoryDropdown <?php if($cat['route'] == $paramCat) echo 'current'?>">
-									<?php echo $cat['name']?>
-								</a>
-							</li>
-						<?php endforeach;?>
-					</ul>
-				</li>
-				<li><a style="width:150px;cursor:pointer;">Бүгд</a></li>
-				<li><a style="width:150px;cursor:pointer;">Архив</a></li>				
+   	    <div class="wrapper">
+  		      <ul id="mainmenu-ul">	
+   				 			<?php $menu_param = $sf_params->get('menuRoute')?>
+							  <?php $menus = GlobalTable::doFetchArray('Menu', array('route', 'name'), array('limit'=>50));?>
+								<?php foreach ($menus as $menu):?>
+										<li>
+												<a href="<?php echo url_for('page/menu?menuRoute='.$menu['route'])?>" class=" <?php if($menu['route'] == $menu_param) echo 'current'?>">
+													<?php echo $menu['name']?>
+												</a>
+										</li>
+								<?php endforeach;?>
+								<li><a style="width:150px;cursor:pointer;">Бүгд</a></li>
+								<li><a style="width:150px;cursor:pointer;">Архив</a></li>				
             </ul>
             <br clear="all">
         </div><!--wrapper-->
