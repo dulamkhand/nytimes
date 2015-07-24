@@ -10,15 +10,14 @@ outline:0;background:none;text-rendering:optimizelegibility;position:relative;fo
 #header{width:100%;height:150px;position:relative;background:#fff;}
 body {background:#fff;position:relative;}
 .wrapper{margin:0 auto;width:1100px;background:transparent;position:relative;}
-#center{float:left;width:750px;margin:8px 0 0 0;z-index:1;}
-#leftside{float:left;width:235px;margin:7px 10px 0 0;min-height:800px;z-index:1;}
-#rightside{float:right;width:240px;margin:7px 0 0 10px;min-height:800px;z-index:1;
+#center{float:left;width:750px;margin:10px 0 0 0;z-index:1;}
+#leftside{float:left;width:235px;margin:0 10px 0 0;min-height:800px;z-index:1;}
+#rightside{float:right;width:240px;margin:10px 0 0 10px;min-height:800px;z-index:1;
 @media (min-width: 1100px) {
 	bottom: 0;
 }}
 
 #footer{}
-#footer *{color:#fff;text-transform:uppercase;font-size:14px;}
 
 #mainmenu {background:#fff;height:25px;width:100%;position:absolute;bottom:0;top:0;z-index:1000;border-top:2px solid #000;border-bottom:1px solid #ccc;}
 #mainmenu ul li{float:left;}
@@ -53,7 +52,7 @@ select option{text-transform:;padding:2px 0px;background:#FFF;}
 /* CUSTOM */
 h1, a.h1{font-size:12px;text-transform:uppercase;color:#000;line-height:18px;font-weight:normal;
          letter-spacing:0px;margin:0 0 10px 0;}
-h2, a.h2{font-size:16px;text-transform:uppercase;color:#fff;line-height:24px;font-weight:normal;
+h2, a.h2{font-size:16px;text-transform:uppercase;color:#000;line-height:24px;font-weight:normal;
          letter-spacing:-1px;margin:0 0 5px 0;}
 h3, a.h3{font-size:14px;text-transform:uppercase;color:#000;line-height:22px;font-weight:bold;
          letter-spacing:-1px;margin:0 0 10px 0;}
