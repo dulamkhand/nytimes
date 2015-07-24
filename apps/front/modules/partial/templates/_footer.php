@@ -6,30 +6,27 @@
 		<?php endif?>
 </div>
 
-<?php include_partial("partial/clients", array());?>
+<?php //include_partial("partial/clients", array());?>
 
 <div id="footer">
 	<div class="wrapper" style="border-top:2px solid #e2e2e2;padding:2px 0px;">
 		<div style="border-top:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2;padding:5px 0px;">
 				<!--logo-->
-        <a href="<?php echo url_for('@homepage')?>" style="">
+        <a href="<?php echo url_for('@homepage')?>" style="margin:0 8px 0 0;">
             <?php echo image_tag('logo377.png', array('style'=>'max-width:200px;'))?>
         </a>
-        <br clear="all"> 	
         <br clear="all">
-		
-		    <div class="left" style="margin:0 10px 0 0;">
-						<!--<a><img src="http://hitwebcounter.com/counter/counter.php?page=5945219&style=0038&nbdigits=5&type=page&initCount=50000" title="" alt="" border="0"></a>-->
-						<?php //echo hits_webcounter(0);?>
-				</div>
-		    <div class="right" style="margin:0 10px 0 0;">
-		        <ul>
-		            <li class="left"><a href="<?php echo url_for('main/about')?>">Вэбийн тухай</a> &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
-		            <li class="left"><a href="<?php echo url_for('main/advertisement')?>">Реклам байршуулах</a> &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
-		            <li class="left"><a href="<?php echo url_for('main/contact')?>">Холбогдох</a></li>
-		        </ul>
-		    </div>
+        <ul>  
+       		<?php $rss = GlobalTable::doFetchArray('Page', array('type', 'title'), array('limit'=>100));?>
+					<?php foreach ($rss as $rs):?>
+							<li style="padding:5px 0;">
+									<a href="<?php echo url_for('main/'.$rs['type'])?>">
+										&raquo; <?php echo $rs['title']?>
+									</a>
+							</li>
+					<?php endforeach;?>
+ 		   	</ul>
   	</div>
-  	<span style="color:#000;font-family:Arial;font-size:11px;">&copy;2015 <?php echo sfConfig::get('app_domain_www')?></span>
+  	<span>&copy;2015 <?php echo sfConfig::get('app_domain_www')?></span>
   </div><!--wrapper-->
 </div><!--footer-->

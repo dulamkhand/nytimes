@@ -13,11 +13,11 @@
         <?php echo image_tag($rs->getCover(), array('style'=>'max-width:600px;'))?>
     </a>
     <div style="margin:5px 0 0 0;">
-        		<?php echo GlobalLib::clearOutput(
-                  mb_strlen($rs->getIntro()) > 180
-                  ? utf8_substr($rs->getIntro(), 0, 180).' ...' 
-                  : $rs->getIntro());?>
-    		</div>
+    		<?php echo GlobalLib::clearOutput(
+              mb_strlen($rs->getIntro()) > 180
+              ? utf8_substr($rs->getIntro(), 0, 180).' ...' 
+              : $rs->getIntro());?>
+        <br clear="all">
         <br clear="all">
     </div>
 </div>

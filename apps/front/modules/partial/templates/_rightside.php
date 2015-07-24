@@ -1,7 +1,7 @@
 <div id="rightside">
     <!--featured news-->
-    <?php $rs = Doctrine::getTable('Content')->doFetchOne(array('title', 'route', 'cover', 'intro'), array('isFeatured'=>'1'));?>
-    <?php if($rs) include_partial("page/featured", array('rs'=>$rs));?>
+    <?php //$rs = Doctrine::getTable('Content')->doFetchOne(array('title', 'route', 'cover', 'intro'), array('isFeatured'=>'1'));?>
+    <?php //if($rs) include_partial("page/featured", array('rs'=>$rs));?>
 
     <!--banner right top-->    
     <?php $rs = GlobalTable::doFetchOne('Banner', array('path, mobile_img, ext, link, target'), array('position'=>'right-top', 'limit'=>1));?>
@@ -11,12 +11,9 @@
     		</div>
     <?php endif?>
     
-    <!--top 5 news-->
-    <?php //include_partial("page/top5", array());?>
-    
     <!--poll-->
-    <?php $rs = GlobalTable::doFetchOne('Poll', array('id, title, body'), array('isActive'=>'1'))?>
-	  <?php if($rs) include_partial('poll/form', array('rs'=>$rs, 'width'=>180));?>
+    <?php //$rs = GlobalTable::doFetchOne('Poll', array('id, title, body'), array('isActive'=>'1'))?>
+	  <?php //if($rs) include_partial('poll/form', array('rs'=>$rs, 'width'=>180));?>
     
     <!--random news-->
     <?php $rss = Doctrine::getTable('Content')->doFetchArray(array('title', 'route', 'cover'), array('limit'=>5, 'orderBy'=>'RAND()'));?>
