@@ -33,11 +33,11 @@
 		                  <?php echo link_to('comment', 'comment/index')?>
 		                </li>
                 <?php endif?>
-                <?php if($sf_user->hasCredential('menu')):?>
-                		<li <?php echo $tab == 'menu' ? 'class="current"' : '' ?>>
-		                  	<?php echo link_to('menu', 'menu/index')?>
-		                </li>
-                <?php endif?>
+                <?php //if($sf_user->hasCredential('menu')):?>
+                		<!--<li <?php //echo $tab == 'menu' ? 'class="current"' : '' ?>>
+		                  	<?php //echo link_to('menu', 'menu/index')?>
+		                </li>-->
+                <?php //endif?>
                 <?php if($sf_user->hasCredential('category')):?>
                 		<li <?php echo $tab == 'category' ? 'class="current"' : '' ?>>
 		                  <?php echo link_to('category', 'category/index')?>
