@@ -1,7 +1,7 @@
 <div style="position:fixed;left:90%;top:371px;z-index:1000;">
-		<div class="fb-like" data-href="https://www.facebook.com/baavar.mn" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true" data-width="65"
+		<div class="fb-like" data-href="https://www.facebook.com/<?php echo sfConfig::get('app_facebook')?>" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true" data-width="65"
 				 style="border-bottom:1px dashed #ccc;margin:0 0 6px 3px;padding:0 0 7px;"></div>
-		<!--<div class="fb-like" data-href="https://www.facebook.com/baavar.mn" data-width="100" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>-->
+		<!--<div class="fb-like" data-href="https://www.facebook.com/<?php echo sfConfig::get('app_facebook')?>" data-width="100" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>-->
 		<br clear="all">
 		
   	<a class="twitter-share-button" href="https://twitter.com/share" data-related="twitterdev" data-count="vertical" 

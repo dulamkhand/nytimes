@@ -60,9 +60,8 @@ class mainActions extends sfActions
     					  $body = $this->getPartial("partial/mailFeedback", array('rs'=>$feedback));
     					  $message = $this->getMailer()->compose(
     					  						$feedback->getEmail(), 
-    					  						sfConfig::get('app_feedbackmail'), 
-    					  						//'handaa.1224@gmail.com', 
-    					  						'baavar.mn | feedback', 
+    					  						sfConfig::get('app_feedback_mail'), 
+    					  						sfConfig::get('app_domain').' ~ feedback', 
     					  						$body);
     					  try {
 		    					  $this->getMailer()->send($message);

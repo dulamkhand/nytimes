@@ -1,4 +1,4 @@
-Монголын нэгдсэн кино сан# You can find more information about this file on the symfony website:
+# You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/13-View
 
 default:
@@ -6,9 +6,9 @@ default:
     content-type: text/html
 
   metas:
-    title:        Спорт мэдээ - Монголын болон Дэлхий дахиний мэдээ мэдээлэл
-    description:  Спорт мэдээ - Монголын болон Дэлхий дахиний мэдээ мэдээлэл
-    keywords:     Спорт мэдээ - Монголын болон Дэлхий дахиний мэдээ мэдээлэл
+    title:        Спорт мэдээ - Монголын болон Дэлхий дахины спортын мэдээ мэдээлэл
+    description:  Спорт мэдээ - Монголын болон Дэлхий дахины спортын мэдээ мэдээлэл
+    keywords:     Спорт мэдээ - Монголын болон Дэлхий дахины спортын мэдээ мэдээлэл
     language:     en
     robots:       index, follow
 
