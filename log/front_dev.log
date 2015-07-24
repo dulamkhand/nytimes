@@ -2040,3 +2040,731 @@ Jul 24 15:34:06 symfony [info] {sfWebDebugLogger} Partial "poll/_form" 16.00 ms 
 Jul 24 15:34:06 symfony [info] {sfWebDebugLogger} Partial "partial/_footer" 25.00 ms (1)
 Jul 24 15:34:06 symfony [info] {sfWebDebugLogger} Partial "partial/_clients" 10.00 ms (1)
 Jul 24 15:34:06 symfony [info] {sfWebResponse} Send content (146244 o)
+Jul 24 15:36:58 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'home',)
+Jul 24 15:36:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 24 15:36:58 symfony [info] {sfFilterChain} Executing filter "sfCacheFilter"
+Jul 24 15:36:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 24 15:36:58 symfony [info] {mainActions} Call "mainActions->executeHome()"
+Jul 24 15:36:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 24 15:36:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM content c WHERE c.is_active = ? - (1)
+Jul 24 15:36:58 symfony [info] {mainActions} Change layout to "homeLayout"
+Jul 24 15:36:58 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\modules/main/templates/homeSuccess.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerHome.php"
+Jul 24 15:36:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (home-top, 1)
+Jul 24 15:36:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.body AS c__body, c.source AS c__source, c.source_link AS c__source_link, c.sort AS c__sort, c.nb_views AS c__nb_views, c.nb_love AS c__nb_love, c.nb_comment AS c__nb_comment, c.is_active AS c__is_active, c.is_new AS c__is_new, c.is_top AS c__is_top, c.is_featured AS c__is_featured, c.ask18 AS c__ask18, c.post_at AS c__post_at, c.created_at AS c__created_at, c.updated_at AS c__updated_at, c.created_aid AS c__created_aid, c.updated_aid AS c__updated_aid, c.keywords AS c__keywords FROM content c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 10 - (1)
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle1.php"
+Jul 24 15:36:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle1, 1)
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle2.php"
+Jul 24 15:36:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle2, 1)
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle3.php"
+Jul 24 15:36:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle3, 1)
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:36:58 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:36:58 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_head.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_header.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:36:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.route AS c__route, c.name AS c__name FROM category c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC LIMIT 11 - (1)
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_leftside.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_top5.php"
+Jul 24 15:36:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.created_at AS c__created_at FROM content c WHERE (c.is_active = ?) ORDER BY c.nb_views DESC, c.sort DESC LIMIT 10 - (1)
+Jul 24 15:36:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-top, 1)
+Jul 24 15:36:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-middle, 1)
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_flash.php"
+Jul 24 15:36:58 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_rightside.php"
+Jul 24 15:36:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro FROM content c WHERE (c.is_active = ? AND c.is_featured = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 1 - (1, 1)
+Jul 24 15:36:59 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_featured.php"
+Jul 24 15:36:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-top, 1)
+Jul 24 15:36:59 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:36:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.title AS p__title, p.body AS p__body FROM poll p WHERE (p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 1 - (1)
+Jul 24 15:36:59 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/poll/templates/_form.php"
+Jul 24 15:36:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.image AS p__image, p.nb_vote AS p__nb_vote, p.body AS p__body FROM poll_option p WHERE (p.poll_id = ? AND p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 20 - (5, 1)
+Jul 24 15:36:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover FROM content c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 5 - (1)
+Jul 24 15:36:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-middle, 1)
+Jul 24 15:36:59 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:36:59 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_footer.php"
+Jul 24 15:36:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (footer, 1)
+Jul 24 15:36:59 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:36:59 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_clients.php"
+Jul 24 15:36:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.logo AS c__logo FROM client c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 20 - (1)
+Jul 24 15:36:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 24 15:36:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Configuration 49.00 ms (13)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Factories 56.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Action "main/home" 69.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Database (Doctrine) 12.00 ms (19)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} View "Success" for "main/home" 336.02 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerHome" 23.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "page/_box" 28.00 ms (8)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle" 52.00 ms (8)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle1" 13.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_banner" 19.00 ms (8)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle2" 10.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle3" 11.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_head" 9.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_header" 18.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_leftside" 31.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "page/_top5" 13.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_flash" 2.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_rightside" 78.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "page/_featured" 7.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "poll/_form" 15.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_footer" 24.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebDebugLogger} Partial "partial/_clients" 11.00 ms (1)
+Jul 24 15:36:59 symfony [info] {sfWebResponse} Send content (146306 o)
+Jul 24 15:38:28 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'home',)
+Jul 24 15:38:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 24 15:38:28 symfony [info] {sfFilterChain} Executing filter "sfCacheFilter"
+Jul 24 15:38:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 24 15:38:28 symfony [info] {mainActions} Call "mainActions->executeHome()"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM content c WHERE c.is_active = ? - (1)
+Jul 24 15:38:28 symfony [info] {mainActions} Change layout to "homeLayout"
+Jul 24 15:38:28 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\modules/main/templates/homeSuccess.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerHome.php"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (home-top, 1)
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.body AS c__body, c.source AS c__source, c.source_link AS c__source_link, c.sort AS c__sort, c.nb_views AS c__nb_views, c.nb_love AS c__nb_love, c.nb_comment AS c__nb_comment, c.is_active AS c__is_active, c.is_new AS c__is_new, c.is_top AS c__is_top, c.is_featured AS c__is_featured, c.ask18 AS c__ask18, c.post_at AS c__post_at, c.created_at AS c__created_at, c.updated_at AS c__updated_at, c.created_aid AS c__created_aid, c.updated_aid AS c__updated_aid, c.keywords AS c__keywords FROM content c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 10 - (1)
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle1.php"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle1, 1)
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle2.php"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle2, 1)
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle3.php"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle3, 1)
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:38:28 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:38:28 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_head.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_header.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.route AS c__route, c.name AS c__name FROM category c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC LIMIT 11 - (1)
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_leftside.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_top5.php"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.created_at AS c__created_at FROM content c WHERE (c.is_active = ?) ORDER BY c.nb_views DESC, c.sort DESC LIMIT 10 - (1)
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-top, 1)
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-middle, 1)
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_flash.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_rightside.php"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro FROM content c WHERE (c.is_active = ? AND c.is_featured = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 1 - (1, 1)
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_featured.php"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-top, 1)
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.title AS p__title, p.body AS p__body FROM poll p WHERE (p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 1 - (1)
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/poll/templates/_form.php"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.image AS p__image, p.nb_vote AS p__nb_vote, p.body AS p__body FROM poll_option p WHERE (p.poll_id = ? AND p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 20 - (5, 1)
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover FROM content c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 5 - (1)
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-middle, 1)
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_footer.php"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (footer, 1)
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:38:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_clients.php"
+Jul 24 15:38:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.logo AS c__logo FROM client c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 20 - (1)
+Jul 24 15:38:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 24 15:38:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Configuration 42.00 ms (13)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Factories 54.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Action "main/home" 82.01 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Database (Doctrine) 12.00 ms (19)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} View "Success" for "main/home" 365.02 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerHome" 28.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "page/_box" 35.00 ms (8)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle" 63.01 ms (8)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle1" 12.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_banner" 20.00 ms (8)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle2" 13.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle3" 14.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_head" 9.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_header" 17.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_leftside" 30.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "page/_top5" 12.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_flash" 2.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_rightside" 82.01 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "page/_featured" 8.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "poll/_form" 16.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_footer" 26.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebDebugLogger} Partial "partial/_clients" 11.00 ms (1)
+Jul 24 15:38:28 symfony [info] {sfWebResponse} Send content (146138 o)
+Jul 24 15:39:28 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'home',)
+Jul 24 15:39:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 24 15:39:28 symfony [info] {sfFilterChain} Executing filter "sfCacheFilter"
+Jul 24 15:39:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 24 15:39:28 symfony [info] {mainActions} Call "mainActions->executeHome()"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM content c WHERE c.is_active = ? - (1)
+Jul 24 15:39:28 symfony [info] {mainActions} Change layout to "homeLayout"
+Jul 24 15:39:28 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\modules/main/templates/homeSuccess.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerHome.php"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (home-top, 1)
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.body AS c__body, c.source AS c__source, c.source_link AS c__source_link, c.sort AS c__sort, c.nb_views AS c__nb_views, c.nb_love AS c__nb_love, c.nb_comment AS c__nb_comment, c.is_active AS c__is_active, c.is_new AS c__is_new, c.is_top AS c__is_top, c.is_featured AS c__is_featured, c.ask18 AS c__ask18, c.post_at AS c__post_at, c.created_at AS c__created_at, c.updated_at AS c__updated_at, c.created_aid AS c__created_aid, c.updated_aid AS c__updated_aid, c.keywords AS c__keywords FROM content c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 10 - (1)
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle1.php"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle1, 1)
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle2.php"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle2, 1)
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle3.php"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle3, 1)
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:39:28 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:39:28 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_head.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_header.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.route AS c__route, c.name AS c__name FROM category c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC LIMIT 11 - (1)
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_leftside.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_top5.php"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.created_at AS c__created_at FROM content c WHERE (c.is_active = ?) ORDER BY c.nb_views DESC, c.sort DESC LIMIT 10 - (1)
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-top, 1)
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-middle, 1)
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_flash.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_rightside.php"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro FROM content c WHERE (c.is_active = ? AND c.is_featured = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 1 - (1, 1)
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_featured.php"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-top, 1)
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.title AS p__title, p.body AS p__body FROM poll p WHERE (p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 1 - (1)
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/poll/templates/_form.php"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.image AS p__image, p.nb_vote AS p__nb_vote, p.body AS p__body FROM poll_option p WHERE (p.poll_id = ? AND p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 20 - (5, 1)
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover FROM content c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 5 - (1)
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-middle, 1)
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_footer.php"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (footer, 1)
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:39:28 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_clients.php"
+Jul 24 15:39:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.logo AS c__logo FROM client c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 20 - (1)
+Jul 24 15:39:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 24 15:39:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Configuration 56.01 ms (13)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Factories 66.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Action "main/home" 97.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Database (Doctrine) 15.00 ms (19)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} View "Success" for "main/home" 462.03 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerHome" 31.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "page/_box" 37.00 ms (8)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle" 75.00 ms (8)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle1" 16.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_banner" 27.00 ms (8)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle2" 15.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle3" 16.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_head" 13.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_header" 23.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_leftside" 39.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "page/_top5" 13.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_flash" 3.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_rightside" 126.01 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "page/_featured" 19.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "poll/_form" 22.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_footer" 33.00 ms (1)
+Jul 24 15:39:28 symfony [info] {sfWebDebugLogger} Partial "partial/_clients" 12.00 ms (1)
+Jul 24 15:39:29 symfony [info] {sfWebResponse} Send content (146372 o)
+Jul 24 15:41:07 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'home',)
+Jul 24 15:41:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 24 15:41:07 symfony [info] {sfFilterChain} Executing filter "sfCacheFilter"
+Jul 24 15:41:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 24 15:41:07 symfony [info] {mainActions} Call "mainActions->executeHome()"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM content c WHERE c.is_active = ? - (1)
+Jul 24 15:41:07 symfony [info] {mainActions} Change layout to "homeLayout"
+Jul 24 15:41:07 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\modules/main/templates/homeSuccess.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerHome.php"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (home-top, 1)
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.body AS c__body, c.source AS c__source, c.source_link AS c__source_link, c.sort AS c__sort, c.nb_views AS c__nb_views, c.nb_love AS c__nb_love, c.nb_comment AS c__nb_comment, c.is_active AS c__is_active, c.is_new AS c__is_new, c.is_top AS c__is_top, c.is_featured AS c__is_featured, c.ask18 AS c__ask18, c.post_at AS c__post_at, c.created_at AS c__created_at, c.updated_at AS c__updated_at, c.created_aid AS c__created_aid, c.updated_aid AS c__updated_aid, c.keywords AS c__keywords FROM content c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 10 - (1)
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle1.php"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle1, 1)
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle2.php"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle2, 1)
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle3.php"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle3, 1)
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:41:07 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:41:07 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_head.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_header.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.route AS c__route, c.name AS c__name FROM category c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC LIMIT 11 - (1)
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_leftside.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_top5.php"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.created_at AS c__created_at FROM content c WHERE (c.is_active = ?) ORDER BY c.nb_views DESC, c.sort DESC LIMIT 10 - (1)
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-top, 1)
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-middle, 1)
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_flash.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_rightside.php"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro FROM content c WHERE (c.is_active = ? AND c.is_featured = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 1 - (1, 1)
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_featured.php"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-top, 1)
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.title AS p__title, p.body AS p__body FROM poll p WHERE (p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 1 - (1)
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/poll/templates/_form.php"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.image AS p__image, p.nb_vote AS p__nb_vote, p.body AS p__body FROM poll_option p WHERE (p.poll_id = ? AND p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 20 - (5, 1)
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover FROM content c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 5 - (1)
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-middle, 1)
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_footer.php"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (footer, 1)
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:41:07 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_clients.php"
+Jul 24 15:41:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.logo AS c__logo FROM client c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 20 - (1)
+Jul 24 15:41:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 24 15:41:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Configuration 47.00 ms (13)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Factories 59.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Action "main/home" 85.01 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 11.00 ms (19)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} View "Success" for "main/home" 359.02 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerHome" 25.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "page/_box" 36.00 ms (8)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle" 59.00 ms (8)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle1" 15.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_banner" 20.00 ms (8)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle2" 11.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle3" 12.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_head" 9.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_header" 18.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_leftside" 31.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "page/_top5" 13.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_flash" 1.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_rightside" 81.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "page/_featured" 6.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "poll/_form" 16.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_footer" 25.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebDebugLogger} Partial "partial/_clients" 10.00 ms (1)
+Jul 24 15:41:07 symfony [info] {sfWebResponse} Send content (146395 o)
+Jul 24 15:43:13 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'home',)
+Jul 24 15:43:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 24 15:43:13 symfony [info] {sfFilterChain} Executing filter "sfCacheFilter"
+Jul 24 15:43:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 24 15:43:13 symfony [info] {mainActions} Call "mainActions->executeHome()"
+Jul 24 15:43:13 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 24 15:43:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM content c WHERE c.is_active = ? - (1)
+Jul 24 15:43:13 symfony [info] {mainActions} Change layout to "homeLayout"
+Jul 24 15:43:13 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\modules/main/templates/homeSuccess.php"
+Jul 24 15:43:13 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerHome.php"
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (home-top, 1)
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.body AS c__body, c.source AS c__source, c.source_link AS c__source_link, c.sort AS c__sort, c.nb_views AS c__nb_views, c.nb_love AS c__nb_love, c.nb_comment AS c__nb_comment, c.is_active AS c__is_active, c.is_new AS c__is_new, c.is_top AS c__is_top, c.is_featured AS c__is_featured, c.ask18 AS c__ask18, c.post_at AS c__post_at, c.created_at AS c__created_at, c.updated_at AS c__updated_at, c.created_aid AS c__created_aid, c.updated_aid AS c__updated_aid, c.keywords AS c__keywords FROM content c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 10 - (1)
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle1.php"
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle1, 1)
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle2.php"
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle2, 1)
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle3.php"
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle3, 1)
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:43:14 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:43:14 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_head.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_header.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.route AS c__route, c.name AS c__name FROM category c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC LIMIT 11 - (1)
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_leftside.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_top5.php"
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.created_at AS c__created_at FROM content c WHERE (c.is_active = ?) ORDER BY c.nb_views DESC, c.sort DESC LIMIT 10 - (1)
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-top, 1)
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-middle, 1)
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_flash.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_rightside.php"
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro FROM content c WHERE (c.is_active = ? AND c.is_featured = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 1 - (1, 1)
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_featured.php"
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-top, 1)
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.title AS p__title, p.body AS p__body FROM poll p WHERE (p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 1 - (1)
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/poll/templates/_form.php"
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.image AS p__image, p.nb_vote AS p__nb_vote, p.body AS p__body FROM poll_option p WHERE (p.poll_id = ? AND p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 20 - (5, 1)
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover FROM content c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 5 - (1)
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-middle, 1)
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_footer.php"
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (footer, 1)
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:43:14 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_clients.php"
+Jul 24 15:43:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.logo AS c__logo FROM client c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 20 - (1)
+Jul 24 15:43:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 24 15:43:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Configuration 47.00 ms (13)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Factories 56.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Action "main/home" 75.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Database (Doctrine) 12.00 ms (19)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} View "Success" for "main/home" 437.03 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerHome" 25.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "page/_box" 33.00 ms (8)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle" 54.00 ms (8)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle1" 13.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_banner" 25.00 ms (8)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle2" 10.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle3" 11.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_head" 9.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_header" 17.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_leftside" 85.01 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "page/_top5" 12.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_flash" 6.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_rightside" 111.01 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "page/_featured" 19.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "poll/_form" 15.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_footer" 24.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebDebugLogger} Partial "partial/_clients" 10.00 ms (1)
+Jul 24 15:43:14 symfony [info] {sfWebResponse} Send content (146475 o)
+Jul 24 15:48:46 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'home',)
+Jul 24 15:48:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 24 15:48:46 symfony [info] {sfFilterChain} Executing filter "sfCacheFilter"
+Jul 24 15:48:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 24 15:48:46 symfony [info] {mainActions} Call "mainActions->executeHome()"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM content c WHERE c.is_active = ? - (1)
+Jul 24 15:48:46 symfony [info] {mainActions} Change layout to "homeLayout"
+Jul 24 15:48:46 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\modules/main/templates/homeSuccess.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerHome.php"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (home-top, 1)
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.body AS c__body, c.source AS c__source, c.source_link AS c__source_link, c.sort AS c__sort, c.nb_views AS c__nb_views, c.nb_love AS c__nb_love, c.nb_comment AS c__nb_comment, c.is_active AS c__is_active, c.is_new AS c__is_new, c.is_top AS c__is_top, c.is_featured AS c__is_featured, c.ask18 AS c__ask18, c.post_at AS c__post_at, c.created_at AS c__created_at, c.updated_at AS c__updated_at, c.created_aid AS c__created_aid, c.updated_aid AS c__updated_aid, c.keywords AS c__keywords FROM content c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 10 - (1)
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle1.php"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle1, 1)
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle2.php"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle2, 1)
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle3.php"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle3, 1)
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:48:46 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:48:46 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_head.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_header.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.route AS c__route, c.name AS c__name FROM category c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC LIMIT 11 - (1)
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_leftside.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_top5.php"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.created_at AS c__created_at FROM content c WHERE (c.is_active = ?) ORDER BY c.nb_views DESC, c.sort DESC LIMIT 10 - (1)
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-top, 1)
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-middle, 1)
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_flash.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_rightside.php"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro FROM content c WHERE (c.is_active = ? AND c.is_featured = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 1 - (1, 1)
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_featured.php"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-top, 1)
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.title AS p__title, p.body AS p__body FROM poll p WHERE (p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 1 - (1)
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/poll/templates/_form.php"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.image AS p__image, p.nb_vote AS p__nb_vote, p.body AS p__body FROM poll_option p WHERE (p.poll_id = ? AND p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 20 - (5, 1)
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover FROM content c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 5 - (1)
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-middle, 1)
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_footer.php"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (footer, 1)
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:48:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_clients.php"
+Jul 24 15:48:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.logo AS c__logo FROM client c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 20 - (1)
+Jul 24 15:48:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 24 15:48:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Configuration 51.00 ms (13)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Factories 59.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Action "main/home" 84.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Database (Doctrine) 13.00 ms (19)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} View "Success" for "main/home" 391.02 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerHome" 35.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "page/_box" 37.00 ms (8)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle" 59.00 ms (8)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle1" 13.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_banner" 20.00 ms (8)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle2" 15.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle3" 11.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_head" 9.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_header" 19.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_leftside" 30.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "page/_top5" 12.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_flash" 2.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_rightside" 84.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "page/_featured" 8.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "poll/_form" 17.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_footer" 33.00 ms (1)
+Jul 24 15:48:46 symfony [info] {sfWebDebugLogger} Partial "partial/_clients" 13.00 ms (1)
+Jul 24 15:48:47 symfony [info] {sfWebResponse} Send content (146498 o)
+Jul 24 15:51:26 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'home',)
+Jul 24 15:51:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 24 15:51:26 symfony [info] {sfFilterChain} Executing filter "sfCacheFilter"
+Jul 24 15:51:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 24 15:51:26 symfony [info] {mainActions} Call "mainActions->executeHome()"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM content c WHERE c.is_active = ? - (1)
+Jul 24 15:51:27 symfony [info] {mainActions} Change layout to "homeLayout"
+Jul 24 15:51:27 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\modules/main/templates/homeSuccess.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerHome.php"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (home-top, 1)
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.body AS c__body, c.source AS c__source, c.source_link AS c__source_link, c.sort AS c__sort, c.nb_views AS c__nb_views, c.nb_love AS c__nb_love, c.nb_comment AS c__nb_comment, c.is_active AS c__is_active, c.is_new AS c__is_new, c.is_top AS c__is_top, c.is_featured AS c__is_featured, c.ask18 AS c__ask18, c.post_at AS c__post_at, c.created_at AS c__created_at, c.updated_at AS c__updated_at, c.created_aid AS c__created_aid, c.updated_aid AS c__updated_aid, c.keywords AS c__keywords FROM content c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 10 - (1)
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle1.php"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle1, 1)
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle2.php"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle2, 1)
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle3.php"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle3, 1)
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:51:27 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:51:27 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_head.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_header.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.route AS c__route, c.name AS c__name FROM category c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC LIMIT 11 - (1)
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_leftside.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_top5.php"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.created_at AS c__created_at FROM content c WHERE (c.is_active = ?) ORDER BY c.nb_views DESC, c.sort DESC LIMIT 10 - (1)
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-top, 1)
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-middle, 1)
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_flash.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_rightside.php"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro FROM content c WHERE (c.is_active = ? AND c.is_featured = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 1 - (1, 1)
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_featured.php"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-top, 1)
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.title AS p__title, p.body AS p__body FROM poll p WHERE (p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 1 - (1)
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/poll/templates/_form.php"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.image AS p__image, p.nb_vote AS p__nb_vote, p.body AS p__body FROM poll_option p WHERE (p.poll_id = ? AND p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 20 - (5, 1)
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover FROM content c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 5 - (1)
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-middle, 1)
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_footer.php"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (footer, 1)
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:51:27 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_clients.php"
+Jul 24 15:51:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.logo AS c__logo FROM client c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 20 - (1)
+Jul 24 15:51:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 24 15:51:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Configuration 49.00 ms (13)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Factories 60.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Action "main/home" 88.01 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Database (Doctrine) 13.00 ms (19)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} View "Success" for "main/home" 355.02 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerHome" 24.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "page/_box" 30.00 ms (8)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle" 52.00 ms (8)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle1" 12.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_banner" 17.00 ms (8)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle2" 10.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle3" 11.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_head" 10.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_header" 18.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_leftside" 30.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "page/_top5" 12.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_flash" 2.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_rightside" 89.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "page/_featured" 17.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "poll/_form" 16.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_footer" 25.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebDebugLogger} Partial "partial/_clients" 10.00 ms (1)
+Jul 24 15:51:27 symfony [info] {sfWebResponse} Send content (146555 o)
+Jul 24 15:52:46 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'home',)
+Jul 24 15:52:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 24 15:52:46 symfony [info] {sfFilterChain} Executing filter "sfCacheFilter"
+Jul 24 15:52:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 24 15:52:46 symfony [info] {mainActions} Call "mainActions->executeHome()"
+Jul 24 15:52:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 24 15:52:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM content c WHERE c.is_active = ? - (1)
+Jul 24 15:52:46 symfony [info] {mainActions} Change layout to "homeLayout"
+Jul 24 15:52:46 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\modules/main/templates/homeSuccess.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerHome.php"
+Jul 24 15:52:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (home-top, 1)
+Jul 24 15:52:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.body AS c__body, c.source AS c__source, c.source_link AS c__source_link, c.sort AS c__sort, c.nb_views AS c__nb_views, c.nb_love AS c__nb_love, c.nb_comment AS c__nb_comment, c.is_active AS c__is_active, c.is_new AS c__is_new, c.is_top AS c__is_top, c.is_featured AS c__is_featured, c.ask18 AS c__ask18, c.post_at AS c__post_at, c.created_at AS c__created_at, c.updated_at AS c__updated_at, c.created_aid AS c__created_aid, c.updated_aid AS c__updated_aid, c.keywords AS c__keywords FROM content c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 10 - (1)
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle1.php"
+Jul 24 15:52:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle1, 1)
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle2.php"
+Jul 24 15:52:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle2, 1)
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:52:46 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle3.php"
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (middle3, 1)
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_box.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_bannerMiddle.php"
+Jul 24 15:52:47 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:52:47 symfony [info] {sfPHPView} Render "C:\wamp\www\nytimes\apps\front\templates/homeLayout.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_head.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_header.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.route AS c__route, c.name AS c__name FROM category c WHERE (c.is_active = ?) ORDER BY c.sort DESC, c.created_at DESC LIMIT 11 - (1)
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_leftside.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_top5.php"
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro, c.created_at AS c__created_at FROM content c WHERE (c.is_active = ?) ORDER BY c.nb_views DESC, c.sort DESC LIMIT 10 - (1)
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-top, 1)
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (left-middle, 1)
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_flash.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_rightside.php"
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover, c.intro AS c__intro FROM content c WHERE (c.is_active = ? AND c.is_featured = ?) ORDER BY c.sort DESC, c.created_at DESC, c.title ASC LIMIT 1 - (1, 1)
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/page/templates/_featured.php"
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-top, 1)
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.title AS p__title, p.body AS p__body FROM poll p WHERE (p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 1 - (1)
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/poll/templates/_form.php"
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.image AS p__image, p.nb_vote AS p__nb_vote, p.body AS p__body FROM poll_option p WHERE (p.poll_id = ? AND p.is_active = ?) ORDER BY p.sort DESC, p.created_at DESC LIMIT 20 - (5, 1)
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.title AS c__title, c.route AS c__route, c.cover AS c__cover FROM content c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 5 - (1)
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.mobile_img AS b__mobile_img, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (right-middle, 1)
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_footer.php"
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT b.id AS b__id, b.path AS b__path, b.ext AS b__ext, b.link AS b__link, b.target AS b__target FROM banner b WHERE (position = ? AND b.is_active = ?) ORDER BY b.sort DESC, b.created_at DESC LIMIT 1 - (footer, 1)
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_banner.php"
+Jul 24 15:52:47 symfony [info] {sfPartialView} Render "C:\wamp\www\nytimes\apps\front\modules/partial/templates/_clients.php"
+Jul 24 15:52:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.logo AS c__logo FROM client c WHERE (c.is_active = ?) ORDER BY RAND() LIMIT 20 - (1)
+Jul 24 15:52:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 24 15:52:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Configuration 43.00 ms (13)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Factories 60.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Action "main/home" 77.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 11.00 ms (19)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} View "Success" for "main/home" 340.02 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerHome" 25.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "page/_box" 32.00 ms (8)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle" 55.00 ms (8)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle1" 13.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_banner" 21.00 ms (8)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle2" 11.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_bannerMiddle3" 10.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_head" 9.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_header" 17.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_leftside" 31.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "page/_top5" 12.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_flash" 2.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_rightside" 78.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "page/_featured" 7.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "poll/_form" 16.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_footer" 26.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebDebugLogger} Partial "partial/_clients" 11.00 ms (1)
+Jul 24 15:52:47 symfony [info] {sfWebResponse} Send content (146550 o)
