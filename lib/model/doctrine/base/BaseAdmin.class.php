@@ -38,6 +38,8 @@ Doctrine_Manager::getInstance()->bindComponent('Admin', 'doctrine');
  * @property Doctrine_Collection $Poll_2
  * @property Doctrine_Collection $PollOption
  * @property Doctrine_Collection $PollOption_3
+ * @property Doctrine_Collection $Menu
+ * @property Doctrine_Collection $Menu_2
  * 
  * @method integer             getId()                Returns the current record's "id" value
  * @method string              getEmail()             Returns the current record's "email" value
@@ -70,6 +72,8 @@ Doctrine_Manager::getInstance()->bindComponent('Admin', 'doctrine');
  * @method Doctrine_Collection getPoll2()             Returns the current record's "Poll_2" collection
  * @method Doctrine_Collection getPollOption()        Returns the current record's "PollOption" collection
  * @method Doctrine_Collection getPollOption3()       Returns the current record's "PollOption_3" collection
+ * @method Doctrine_Collection getMenu()              Returns the current record's "Menu" collection
+ * @method Doctrine_Collection getMenu2()             Returns the current record's "Menu_2" collection
  * @method Admin               setId()                Sets the current record's "id" value
  * @method Admin               setEmail()             Sets the current record's "email" value
  * @method Admin               setPassword()          Sets the current record's "password" value
@@ -101,6 +105,8 @@ Doctrine_Manager::getInstance()->bindComponent('Admin', 'doctrine');
  * @method Admin               setPoll2()             Sets the current record's "Poll_2" collection
  * @method Admin               setPollOption()        Sets the current record's "PollOption" collection
  * @method Admin               setPollOption3()       Sets the current record's "PollOption_3" collection
+ * @method Admin               setMenu()              Sets the current record's "Menu" collection
+ * @method Admin               setMenu2()             Sets the current record's "Menu_2" collection
  * 
  * @package    imdb
  * @subpackage model
@@ -303,6 +309,14 @@ abstract class BaseAdmin extends sfDoctrineRecord
              'foreign' => 'updated_aid'));
 
         $this->hasMany('PollOption as PollOption_3', array(
+             'local' => 'id',
+             'foreign' => 'created_aid'));
+
+        $this->hasMany('Menu', array(
+             'local' => 'id',
+             'foreign' => 'updated_aid'));
+
+        $this->hasMany('Menu as Menu_2', array(
              'local' => 'id',
              'foreign' => 'created_aid'));
     }
