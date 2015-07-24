@@ -33,7 +33,8 @@ class mainActions extends sfActions
         $this->pager = Doctrine::getTable('Content')->getPager($CONTENT_COLUMNS,
             array('s'=>$this->s), $request->getParameter('page'));	
     }
-
+    
+    # BEGIN OF PAGE
     public function executeAbout(sfWebRequest $request)
     {	
         $this->page = GlobalTable::doFetchOne('Page', array('*'), array('type'=>'about', 'limit'=>1));
@@ -43,9 +44,24 @@ class mainActions extends sfActions
     {	
         $this->page = GlobalTable::doFetchOne('Page', array('*'), array('type'=>'advertisement', 'limit'=>1));
     }
+		
+    public function executePrivacy(sfWebRequest $request)
+    {	
+        $this->page = GlobalTable::doFetchOne('Page', array('*'), array('type'=>'privacy', 'limit'=>1));
+    }
+    
+    public function executeTerms(sfWebRequest $request)
+    {	
+        $this->page = GlobalTable::doFetchOne('Page', array('*'), array('type'=>'terms', 'limit'=>1));
+    }
+    
+    public function executeCooperate(sfWebRequest $request)
+    {	
+        $this->page = GlobalTable::doFetchOne('Page', array('*'), array('type'=>'cooperate', 'limit'=>1));
+    }
         
     public function executeContact(sfWebRequest $request)
-    {	
+    {
     		$form = new FeedbackForm();
     		if($request->isMethod(sfRequest::POST)) {
     				$form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
@@ -75,26 +91,9 @@ class mainActions extends sfActions
 			  $this->form = $form;
 			  $this->setLayout('wideLayout');
     }
+    # EO PAGE
     
     public function execute404(sfWebRequest $request)
     {
-        
     }
-    
-    public function executeAutoPost(sfWebRequest $request)
-    {
-				date_default_timezone_set('Asia/Ulaanbaatar');
-		        $rss = Doctrine::getTable('Content')->doExecute(array('id, is_active, post_at, created_at'), array('isActive'=>'0', 'limit'=>100, 'postAtGt'=>date('Y-m-d H').':00:00', 'postAtLt'=>date('Y-m-d H').':59:59'));
-				foreach($rss as $rs) {
-					$rs->setIsActive(1);
-					$rs->setCreatedAt($rs->getPostAt());
-					$rs->save();
-				}
-				$this->setTemplate(false);
-				$this->setLayout(false);
-				$nbposts = sizeof($rss);
-				unset($rss);
-				return $this->renderText($nbposts." posts successfully auto posted.");
-    }
-
 }

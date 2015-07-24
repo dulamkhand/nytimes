@@ -5,15 +5,14 @@
     <?php include_partial("partial/header", array());?>
   
     <div class="wrapper">
-        <?php //include_partial("partial/bannerHome", array());?>
         <?php include_partial("partial/flash", array());?>
         <div id="center">
             <?php echo $sf_content ?>
             <br clear="all">
         </div>
-		<?php include_partial("partial/rightside", array());?>
-		<br clear="all">
-    </div>
+				<?php include_partial("partial/rightside", array());?>
+				<br clear="all">
+    </div><!--wrapper-->
     
     <?php include_partial("partial/footer", array());?>
 </body>

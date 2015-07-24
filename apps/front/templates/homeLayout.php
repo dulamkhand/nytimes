@@ -11,9 +11,9 @@
             <?php echo $sf_content ?>
             <br clear="all">
         </div>
-		<?php include_partial("partial/rightside", array());?>
-		<br clear="all">
-    </div>
+				<?php include_partial("partial/rightside", array());?>
+				<br clear="all">
+    </div><!--wrapper-->
     
     <?php include_partial("partial/footer", array());?>
 </body>

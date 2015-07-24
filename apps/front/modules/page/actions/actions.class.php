@@ -24,7 +24,7 @@ class pageActions extends sfActions
         global $CONTENT_COLUMNS;
         $this->pager = Doctrine::getTable('Content')->getPager($CONTENT_COLUMNS, array('categoryRoute'=>$route), 
             $request->getParameter('page'));
-		unset($route);
+				unset($route);
     }
   
     public function executeShow(sfWebRequest $request)
@@ -40,10 +40,10 @@ class pageActions extends sfActions
         // META
         $meta = sfConfig::get('app_webname');
         $this->getResponse()->setTitle($rs.' | '.$meta);
-		unset($meta);
+				unset($meta);
         $this->getResponse()->addMeta('description', $rs->getIntro());
         $this->getResponse()->addMeta('keywords', $rs->getKeywords().' '.$rs->getIntro());
-		unset($rs);
+				unset($rs);
     }
     
     public function executeByNbView(sfWebRequest $request)
