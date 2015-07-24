@@ -6,9 +6,9 @@ default:
     content-type: text/html
 
   metas:
-    title:        baavar.mn | Өдөр тутмын вэб сэтгүүл
-    description:  baavar.mn | Өдөр тутмын вэб сэтгүүл
-    keywords:     baavar.mn | Өдөр тутмын вэб сэтгүүл
+    title:        Спорт мэдээ - Монголын болон Дэлхий дахиний мэдээ мэдээлэл
+    description:  Спорт мэдээ - Монголын болон Дэлхий дахиний мэдээ мэдээлэл
+    keywords:     Спорт мэдээ - Монголын болон Дэлхий дахиний мэдээ мэдээлэл
     language:     en
     robots:       index, follow
 

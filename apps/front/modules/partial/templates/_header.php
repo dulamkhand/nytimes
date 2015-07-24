@@ -33,16 +33,10 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
         <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>1000, 'height'=>100));?>
         
     	<!--logo-->
-        <a href="<?php echo url_for('@homepage')?>" class="left" style="margin:0 0 0 30%;">
-            <?php echo image_tag('logo-ny.jpg', array('style'=>'width:300px;align:middle;'))?>
+        <a href="<?php echo url_for('@homepage')?>" class="left" style="margin:15px 0 0 28%;">
+            <?php echo image_tag('logo377.png', array('style'=>''))?>
         </a>
-        <span class="left" style="color:#474748;font-size:22px;letter-spacing:-1px;font-weight:normal;margin:35px 0 0 20px;text-transform:uppercase;">
-            
-        </span>
-
-        
-        
-       
+        <br clear="all"> 	
         <br clear="all"> 	
     </div><!--wrapper-->  
       
@@ -50,12 +44,12 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
     <div id="mainmenu">
    	    <div class="wrapper">
   		      <ul id="mainmenu-ul">	
-   				 			<?php $menu_param = $sf_params->get('menuRoute')?>
-							  <?php $menus = GlobalTable::doFetchArray('Menu', array('route', 'name'), array('limit'=>50));?>
-								<?php foreach ($menus as $menu):?>
+   				 			<?php $cat_param = $sf_params->get('categoryRoute')?>
+							  <?php $cats = GlobalTable::doFetchArray('Category', array('route', 'name'), array('limit'=>50));?>
+								<?php foreach ($cats as $cat):?>
 										<li>
-												<a href="<?php echo url_for('page/menu?menuRoute='.$menu['route'])?>" class=" <?php if($menu['route'] == $menu_param) echo 'current'?>">
-													<?php echo $menu['name']?>
+												<a href="<?php echo url_for('page/index?categoryRoute='.$cat['route'])?>" class=" <?php if($cat['route'] == $cat_param) echo 'current'?>">
+													<?php echo $cat['name']?>
 												</a>
 										</li>
 								<?php endforeach;?>
