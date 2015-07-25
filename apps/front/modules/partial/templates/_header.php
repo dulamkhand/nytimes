@@ -59,6 +59,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
     <div id="mainmenu">
    	    <div class="wrapper">
   		      <ul id="mainmenu-ul">	
+  		      		<li><a href="<?php echo url_for('@homepage')?>" style="padding-left:0;">Нүүр</a></li>
    				 			<?php $cat_param = $sf_params->get('categoryRoute')?>
 							  <?php $cats = GlobalTable::doFetchArray('Category', array('route', 'name'), array('limit'=>11));?>
 								<?php foreach ($cats as $cat):?>
@@ -68,8 +69,9 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 												</a>
 										</li>
 								<?php endforeach;?>
-								<li><a style="width:150px;cursor:pointer;">Бүгд</a></li>
-								<li><a style="width:150px;cursor:pointer;">Архив</a></li>				
+								<li style="float:right;"><a href="https://youtube.com/<?php echo sfConfig::get('app_youtube')?>" target="_blank" style="padding:3px 5px;"><?php echo image_tag('icons/socials/youtube-6-16.png', array())?></a></li>
+								<li style="float:right;"><a href="https://twitter.com/<?php echo sfConfig::get('app_twitter')?>" target="_blank" style="padding:3px 5px;"><?php echo image_tag('icons/socials/twitter-16.png', array())?></a></li>
+								<li style="float:right;"><a href="http://facebook.com/<?php echo sfConfig::get('app_facebook')?>" target="_blank" style="padding:3px 5px;"><?php echo image_tag('icons/socials/facebook-16.png', array())?></a></li>
             </ul>
             <br clear="all">
         </div><!--wrapper-->
