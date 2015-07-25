@@ -17,7 +17,9 @@ class GlobalLib
             17=>17,18=>18,19=>19,20=>20,21=>21,22=>22,23=>23,24=>24,25=>25,26=>26,27=>27,28=>28,29=>29,30=>30,31=>31);
 
     public static $banner_position = array(
-                  'header'   		=> 'Header 1000 x 100', 
+                  'header'   		=> 'Header 1100 x 100', 
+                  'header-left' => 'Header left 200 x 93', 
+                  'header-right'=> 'Header right 200 x 93', 
                   'home-top' 		=> 'Home top 600 x 150', 
                   'floating' 		=> 'Floating 150 x 150', 
                   'middle1'  		=> 'Middle1 600 x 150', 
@@ -27,7 +29,7 @@ class GlobalLib
                   'left-middle' => 'Left middle 235 x 400',
                   'right-top'		=> 'Right top 250 x 400',
                   'right-middle'=> 'Right middle 250 x 400',
-                  'footer'			=> 'Footer 1000 x 150', 
+                  'footer'			=> 'Footer 1100 x 150', 
     );
 
     public static $mod_permissions = array('content'=>'Content', 'comment'=>'Comment', 'category'=>'Category', 'poll'=>'Poll',
