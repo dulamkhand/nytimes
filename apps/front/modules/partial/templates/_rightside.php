@@ -7,7 +7,7 @@
     <?php $rs = GlobalTable::doFetchOne('Banner', array('path, mobile_img, ext, link, target'), array('position'=>'right-top', 'limit'=>1));?>
     <?php if($rs):?>
     		<div style="margin:0 0 10px 0;">
-				    <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>240, 'height'=>400));?>
+				    <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>240, 'height'=>600));?>
     		</div>
     <?php endif?>
     

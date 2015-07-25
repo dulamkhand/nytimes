@@ -18,17 +18,16 @@ class GlobalLib
 
     public static $banner_position = array(
                   'header'   		=> 'Header 1100 x 100', 
-                  'header-left' => 'Header left 200 x 93', 
-                  'header-right'=> 'Header right 200 x 93', 
+                  'header-left' => 'Header left 260 x 60', 
+                  'header-right'=> 'Header right 260 x 60', 
                   'home-top' 		=> 'Home top 600 x 150', 
-                  'floating' 		=> 'Floating 150 x 150', 
                   'middle1'  		=> 'Middle1 600 x 150', 
-                  'middle2'  		=> 'Middle2 600 x 150', 
-                  'middle3'  		=> 'Middle3 600 x 150', 
-                  'left-top'		=> 'Left top 235 x 400',
-                  'left-middle' => 'Left middle 235 x 400',
-                  'right-top'		=> 'Right top 250 x 400',
-                  'right-middle'=> 'Right middle 250 x 400',
+                  'middle2'  		=> 'Middle2 600 x 250', 
+                  'middle3'  		=> 'Middle3 600 x 350', 
+                  'left-top'		=> 'Left top 235 x 600',
+                  'left-middle' => 'Left middle 235 x 600',
+                  'right-top'		=> 'Right top 250 x 600',
+                  'right-middle'=> 'Right middle 250 x 600',
                   'footer'			=> 'Footer 1100 x 150', 
     );
 

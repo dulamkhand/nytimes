@@ -15,7 +15,7 @@
 					</object>
 				<?php }?>
 		    <?php } else {?>
-		            <?php echo image_tag('/u/b/'.$rs['path'], array('style'=>'max-width:'.$width.'px;max-height:'.$height.'px;'));?>
+		            <?php echo image_tag('/u/b/'.$rs['path'], array('style'=>'width:'.$width.'px;max-height:'.$height.'px;'));?>
 		    <?php }?>
     </a>
 <?php }?>

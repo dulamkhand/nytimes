@@ -4,7 +4,7 @@
     
     <!--banner left top-->    
     <?php $rs = GlobalTable::doFetchOne('Banner', array('path, mobile_img, ext, link, target'), array('position'=>'left-top', 'limit'=>1));?>
-    <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>235, 'height'=>400));?>
+    <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>235, 'height'=>600));?>
     
     <div style="margin:10px 0 0 0;border-top:2px solid #000;padding:2px 0;">
     		<span style="color:#000;padding:2px;">Бүх ангилал</span>
@@ -25,6 +25,6 @@
 
     <!--banner right middle-->
     <?php $rs = GlobalTable::doFetchOne('Banner', array('path, mobile_img, ext, link, target'), array('position'=>'left-middle', 'limit'=>1));?>
-    <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>235, 'height'=>400));?>
+    <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>235, 'height'=>600));?>
 	
 </div><!--rightside-->

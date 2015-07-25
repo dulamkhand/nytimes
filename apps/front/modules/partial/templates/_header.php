@@ -35,10 +35,10 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
         
         <table width="100%" style="margin:5px 0 10px 0;">
         		<tr>
-        				<td width="30%" align="left">
+        				<td width="33%" align="left">
         						<!--banner header left-->
 										<?php $rs = GlobalTable::doFetchOne('Banner', array('path', 'ext', 'link', 'target'), array('position'=>'header-left', 'limit'=>1));?>
-						        <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>200, 'height'=>93));?>
+						        <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>260, 'height'=>60));?>
         				</td>
         				<td width="40%" align="center">
         						<!--logo-->
@@ -47,9 +47,11 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 						        </a>
         				</td>
         				<td width="30%" align="right">
-        						<!--banner header right -->
-										<?php $rs = GlobalTable::doFetchOne('Banner', array('path', 'ext', 'link', 'target'), array('position'=>'header-right', 'limit'=>1));?>
-						        <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>200, 'height'=>93));?>
+        						<div class="right">
+	        						<!--banner header right -->
+											<?php $rs = GlobalTable::doFetchOne('Banner', array('path', 'ext', 'link', 'target'), array('position'=>'header-right', 'limit'=>1));?>
+							        <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>260, 'height'=>60));?>
+						        </div>
         				</td>
         		</tr>
         </table>
@@ -61,7 +63,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
   		      <ul id="mainmenu-ul">	
   		      		<li><a href="<?php echo url_for('@homepage')?>" style="padding-left:0;">Нүүр</a></li>
    				 			<?php $cat_param = $sf_params->get('categoryRoute')?>
-							  <?php $cats = GlobalTable::doFetchArray('Category', array('route', 'name'), array('limit'=>11));?>
+							  <?php $cats = GlobalTable::doFetchArray('Category', array('route', 'name'), array('limit'=>9));?>
 								<?php foreach ($cats as $cat):?>
 										<li>
 												<a href="<?php echo url_for('page/index?categoryRoute='.$cat['route'])?>" class=" <?php if($cat['route'] == $cat_param) echo 'current'?>">
@@ -78,7 +80,6 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
     </div><!--mainmenu-->
 
     <?php //include_partial("partial/socialsFloating", array());?>
-    <?php //include_partial("partial/bannerFloating", array());?>
 </div><!--header-->
 
 <script type="text/javascript">
