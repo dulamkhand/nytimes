@@ -2,6 +2,8 @@
 <div class="wrapper">
 		<?php $rs = GlobalTable::doFetchOne('Banner', array('path', 'ext', 'link', 'target'), array('position'=>'footer', 'limit'=>1));?>
 		<?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>1100, 'height'=>150));?>
+		<br clear="all">
+		<br clear="all">
 </div>
 
 <?php //include_partial("partial/clients", array());?>
