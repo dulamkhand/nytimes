@@ -1,9 +1,7 @@
+<!--banner footer-->    
 <div class="wrapper">
-		<!--banner footer-->    
 		<?php $rs = GlobalTable::doFetchOne('Banner', array('path', 'ext', 'link', 'target'), array('position'=>'footer', 'limit'=>1));?>
-		<?php if($rs):?>
-				<?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>1000, 'height'=>150));?>
-		<?php endif?>
+		<?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>1100, 'height'=>150));?>
 </div>
 
 <?php //include_partial("partial/clients", array());?>

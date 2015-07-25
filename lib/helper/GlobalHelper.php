@@ -11,8 +11,8 @@ function pager($pager, $uri)
 	
 	    // First and previous page
 	    if ($pager->getPage() != 1) {
-		      $navigation .= '<a href="'.$uri.'1">&laquo; Эхэнд</a>';
-		      $navigation .= '<a href="'.$uri.$pager->getPreviousPage().'">Өмнөх</a>';
+		      $navigation .= '<a href="'.$uri.'1">&laquo; Эхлэл</a>';
+		      $navigation .= '<a href="'.$uri.$pager->getPreviousPage().'">Өмнөх хуудас</a>';
 	    }
 	
 	    // Pages one by one
@@ -24,13 +24,13 @@ function pager($pager, $uri)
 	    $navigation .= join('', $links);
 	    // Next and last page
 	    if ($pager->getPage() != $pager->getCurrentMaxLink()) {
-		      $navigation .= '<a href="'.$uri.$pager->getNextPage().'" >Дараах</a>';
-	  	    $navigation .= '<a href="'.$uri.$pager->getLastPage().'" >Сүүлд &raquo;</a>';
+		      $navigation .= '<a href="'.$uri.$pager->getNextPage().'" >Дараах хуудас</a>';
+	  	    $navigation .= '<a href="'.$uri.$pager->getLastPage().'" >Сүүлийн хуудас &raquo;</a>';
 	    }
   }
 
   if ($pager->getNbResults() > 0) {
-    	$navigation .= '<span class="total">Нийт: <b>'.$pager->getNbResults().'</b>. Энэ хуудсанд: <b>'.$pager->getFirstIndice().'-'.$pager->getLastIndice().'</b>.</span>';
+    	$navigation .= '<span class="total">Нийт: <b>'.$pager->getNbResults().'</b> мэдээ. Энэ хуудсанд <b>'.$pager->getFirstIndice().'-'.$pager->getLastIndice().'</b> мэдээ харагдаж байна.</span>';
   }
   $navigation .= '</div>';
   return $navigation;
