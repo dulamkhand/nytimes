@@ -1,4 +1,4 @@
-<?php $rss = Doctrine::getTable('Content')->doFetchArray(array('title', 'route', 'cover', 'intro', 'created_at'), 
+<?php $rss = Doctrine::getTable('Content')->doFetchArray(array('title', 'route', 'cover', 'created_at'), 
     						 //array('limit'=>5, 'orderBy'=>'nb_views DESC, sort DESC', 'createdAtGt'=>date('Y-m-d H:i', strtotime('-10 week'))));
     						 array('limit'=>10, 'orderBy'=>'nb_views DESC, sort DESC'));?>
 <?php $i = 0?>
