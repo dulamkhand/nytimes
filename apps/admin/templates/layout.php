@@ -21,8 +21,10 @@
 </head>
 
 <body>
-    <?php if($sf_user->isAuthenticated()):?>
-        <div id="topmenu"><ul>
+	<div class="left" style="width:145px;">
+		<?php if($sf_user->isAuthenticated()):?>
+      <div id="topmenu">
+    		<ul>
             <?php $tab = isset($tab) ? $tab : $sf_request->getParameter('module'); ?>
             <?php $act = isset($act) ? $act : $sf_request->getParameter('action'); ?>
             		<li <?php echo $tab == 'content' ? 'class="current"' : '' ?>>
@@ -33,29 +35,14 @@
 		                  <?php echo link_to('comment', 'comment/index')?>
 		                </li>
                 <?php endif?>
-                <?php //if($sf_user->hasCredential('menu')):?>
-                		<!--<li <?php //echo $tab == 'menu' ? 'class="current"' : '' ?>>
-		                  	<?php //echo link_to('menu', 'menu/index')?>
-		                </li>-->
-                <?php //endif?>
                 <?php if($sf_user->hasCredential('category')):?>
                 		<li <?php echo $tab == 'category' ? 'class="current"' : '' ?>>
 		                  <?php echo link_to('category', 'category/index')?>
 		                </li>
                 <?php endif?>
-                <?php if($sf_user->hasCredential('poll')):?>
-                		<li <?php echo $tab == 'poll' ? 'class="current"' : '' ?>>
-		                  <?php echo link_to('poll', 'poll/index')?>
-		                </li>
-                <?php endif?>
                 <?php if($sf_user->hasCredential('banner')):?>
                 		<li <?php echo $tab == 'banner' ? 'class="current"' : '' ?>>
 		                  <?php echo link_to('banner', 'banner/index')?>
-		                </li>
-                <?php endif?>
-                <?php if($sf_user->hasCredential('client')):?>
-                		<li <?php echo $tab == 'client' ? 'class="current"' : '' ?>>
-		                  <?php echo link_to('client', 'client/index')?>
 		                </li>
                 <?php endif?>
                 <?php if($sf_user->hasCredential('page')):?>
@@ -74,33 +61,33 @@
 		                </li>
                 <?php endif?>
             <li><?php echo link_to('Logout ('.$sf_user->getEmail().')', 'admin/logout')?></li>
-        </ul></div><!--topmenu-->
-    
-        <br clear="all">   
-        <div id="submenu">
-            <?php 
-            if($tab == 'image') { 
-                echo link_to('+ new', 'image/new?contentId='.$sf_params->get('contentId'));
-                echo link_to('list', 'content/index');
-            } else if($tab == 'page') {
-                echo link_to('list', 'page/index');
-            } else {
-            		echo link_to('+ new', $tab.'/new');
-                echo link_to('list', $tab.'/index');
-            }
-            ?>
-            <br clear="all">
-        </div><!--topmenu-->
+        </ul>
+    	</div><!--topmenu-->
+	    
+      <br clear="all">   
+      <div id="submenu">
+          <?php 
+          if($tab == 'image') { 
+              echo link_to('+ new', 'image/new?contentId='.$sf_params->get('contentId'));
+              echo link_to('list', 'content/index');
+          } else if($tab == 'page') {
+              echo link_to('list', 'page/index');
+          } else {
+          		echo link_to('+ new', $tab.'/new');
+              echo link_to('list', $tab.'/index');
+          }
+          ?>
+          <br clear="all">
+      </div><!--submenu-->
     <?php endif ?>
+	</div><!--left-->
 
-    <div id="wrapper">
-      <div id="content" class="full">
-          <?php if ($sf_user->hasFlash('flash')): ?>
-              <div class="flash"><?php echo $sf_user->getFlash('flash')?></div>
-          <?php endif; ?>
-  
-          <?php echo $sf_content ?>
-      </div><!--content-->
-    </div><!--wrapper-->
+  <div id="content">
+      <?php if ($sf_user->hasFlash('flash')): ?>
+          <div class="flash"><?php echo $sf_user->getFlash('flash')?></div>
+      <?php endif; ?>
+
+      <?php echo $sf_content ?>
+  </div><!--content-->
 </body>
 </html>
