@@ -141,12 +141,12 @@ Admin:
       type: many
     Menu:
       local: id
-      foreign: updated_aid
+      foreign: created_aid
       type: many
     Menu_2:
       class: Menu
       local: id
-      foreign: created_aid
+      foreign: updated_aid
       type: many
     Page:
       local: id
@@ -589,6 +589,13 @@ Comment:
       unsigned: false
       primary: false
       default: '0'
+      notnull: true
+      autoincrement: false
+    nb_love:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
       notnull: true
       autoincrement: false
     is_active:
@@ -1054,12 +1061,12 @@ Menu:
       autoincrement: false
   relations:
     Admin:
-      local: updated_aid
+      local: created_aid
       foreign: id
       type: one
     Admin_2:
       class: Admin
-      local: created_aid
+      local: updated_aid
       foreign: id
       type: one
 Page:

@@ -314,10 +314,10 @@ abstract class BaseAdmin extends sfDoctrineRecord
 
         $this->hasMany('Menu', array(
              'local' => 'id',
-             'foreign' => 'updated_aid'));
+             'foreign' => 'created_aid'));
 
         $this->hasMany('Menu as Menu_2', array(
              'local' => 'id',
-             'foreign' => 'created_aid'));
+             'foreign' => 'updated_aid'));
     }
 }

@@ -80,6 +80,8 @@
 						<a class="twitter-share-button" href="https://twitter.com/share?url=<?php echo $url?>&amp;via=<?php echo sfConfig::get('app_domain');?>&amp;text=<?php echo $title?>">Tweet</a>
 				</li>
 		</ul><!--navigation-->
+		<br clear="all">
+		<br clear="all">
 		
 		<!--similars-->
 		<?php include_partial('similars', array('id'=>$rs->getId(), 'categoryIds'=>$categoryIds));?>

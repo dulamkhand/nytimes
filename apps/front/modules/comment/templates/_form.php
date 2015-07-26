@@ -1,20 +1,18 @@
-<div style="color:#ED242D;margin:10px 0;padding:0;">
-		АНХААРУУЛГА: Уншигчдын бичсэн сэтгэгдэлд <b style="color:#ED242D;"><?php echo sfConfig::get('app_domain_www')?></b> хариуцлага хүлээхгүй болно. 
-		Манай сайт ХХЗХ-ны журмын дагуу зүй зохисгүй зарим үг, хэллэгийг хязгаарласан тул 
-		та сэтгэгдэл бичихдээ бусдын эрх ашгийг хүндэтгэн үзнэ үү.
+<div style="color:#ff0033;margin:10px 0;padding:0;">
+		Та бусдыг хүндэтгэн зохистой сэтгэгдэл үлдээнэ үү.
 </div>
 <a name="comment-form"></a>
 <form action="#" method="post" class="form" id="comment-form">
       <input type="hidden" value="<?php echo $objectType ?>" name="commentObjectType" id="commentObjectType" />
       <input type="hidden" value="<?php echo $objectId ?>" name="commentObjectId" id="commentObjectId" />
       
-      <input type="text" name="comment-name" id="comment-name" value="Зочин" style="margin:0 0 2px 0;border:1px solid #ccc;width:400px;" /><br>
-      <textarea name="comment-area" id="comment-area" style="margin:0 0 4px 0;border:1px solid #ccc;width:400px;height:150px;"></textarea>
+      <input type="text" name="comment-name" id="comment-name" value="Таны нэр" style="margin:0 0 2px 0;border:1px solid #ccc;width:600px;" /><br>
+      <textarea name="comment-area" id="comment-area" style="margin:0 0 4px 0;border:1px solid #ccc;width:600px;height:80px;">Сэтгэгдэл</textarea>
       <div id="comment-error" style="color:#ED242D;margin:0 0 6px 0;"></div>
     
-      <span style="padding:1px 0px 1px 1px;border:1px solid #0677cf;background:#fff;width:181px;display:block;">
-          <button class="button" type="button" style="width:180px;padding:4px 15px;" value="Сэтгэгдэл үлдээх" onclick="submitCommentForm();">
-              Сэтгэгдэл үлдээх
+      <span style="padding:1px 0px 1px 1px;border:1px solid #000;background:#fff;width:91px;display:block;">
+          <button class="button" type="button" style="width:90px;padding:4px 15px;" value="Илгээх" onclick="submitCommentForm();">
+              Илгээх
           </button>
       </span>
       <?php echo image_tag('icons/loading.gif', array('id'=>'comment-loader', 'style'=>'display:none;'))?>
@@ -55,21 +53,21 @@ $(document).ready(function(){
   
   /* name */
   $('#comment-name').click(function(){
-      if($(this).val().trim() == "Зочин")
+      if($(this).val().trim() == "Таны нэр")
       {
           $(this).val('');
       }
   }).blur(function() {
       if($(this).val().trim() == "")
       {
-          $(this).val('Зочин');
+          $(this).val('Таны нэр');
       }
   });
   
   
   /* textarea */
   $('#comment-area').blur(function(){
-      if($(this).val().trim() == "")
+      if($(this).val().trim() == "Сэтгэгдэл")
       {
           $(this).val('');
       }
