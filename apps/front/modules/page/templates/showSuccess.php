@@ -7,30 +7,11 @@
 <meta property=fb:app_id content="824938190895781"/>
 <link rel="image_src" href="<?php echo $host.$rs->getCover()?>"/>
 
-<!--breadcrumb-->
-<h3 class="left" style="width:65px;margin:0 0 5px 0;cursor:default;">Ангилал: </h3>
-<?php $i=0; $nb = sizeof($rs->getCategoryContent());?>
-<?php $categoryIds = array()?>
-<?php foreach ($rs->getCategoryContent() as $catcon):?>
-		<a href="<?php echo url_for('page/index?categoryRoute='.$catcon->getCategory()->getRoute())?>" class="h3 left" 
-				style="color:#0677cf;margin:0 0 5px 6px;width:<?php echo mb_strlen($catcon->getCategory())*10/2;?>px">
-				<?php echo $catcon->getCategory()?><?php echo (++$i < $nb) ? ',' : '';?>
-		</a>
-	 <?php $categoryIds[$catcon->getCategoryId()] = $catcon->getCategoryId()?>
-<?php endforeach?>
-<br clear="all">
-
 <!--content & images-->
-<div style="background:#fff;width:720px;padding:15px;line-height:30px;border-top:2px solid #0677cf;">
-    <h1 style="border-bottom:1px solid #dedede;padding:0 0 10px 0;margin:0;font-weight:bold;letter-spacing:0px;">
+<div style="background:#fff;width:600px;padding:0;line-height:30px;" class="left">
+    <h1 style="margin:0 0 5px 0;font-size:20px;line-height:30px;">
         <?php echo $title?>
     </h1>
-    <div style="border-bottom:1px solid #dedede;color:#888;padding:4px 0;">
-        <?php include_partial('page/icons', array('rs'=>$rs));?>
-        <div class="right"><?php include_partial('page/share', array('url'=>$url, 'title'=>$title));?></div>
-        <br clear="all">
-    </div>
-    
     <?php echo $intro?>
     <br clear="all">
     <?php 
@@ -48,30 +29,67 @@
     ?>
     <?php echo GlobalLib::clearOutput($rs->getBody())?>
     <br clear="all">
-    <div style="border-top:1px solid #dedede;border-bottom:1px solid #dedede;color:#888;margin:30px 0 30px 0;padding:4px 0;">
-				<div class="left" style="margin:7px 0 0 0;width:90px;">
-				    <div class="fb-like" data-href="<?php echo $url?>" data-send="false" colorscheme="dark" data-layout="button_count" data-width="20" 
-				        data-show-faces="false"></div>
-				</div>
-    		<div class="right"><?php include_partial('page/share', array('url'=>$url, 'title'=>$title));?></div>
-        <br clear="all">
-    </div>
+    
     
     <!--prev and next-->
     <?php include_partial('prev_next', array('id'=>$rs->getId()));?>
 </div>
+
+<div class="left" style="width:210px;border:0px solid #e2e2e2;margin:0 0 0 15px;padding:0 10px;">
+		<ul class="navigation">
+				<li>
+        		<span class="details left" style="margin:0;">Ангилал: &nbsp;</span>
+						<?php $i=0; $nb = sizeof($rs->getCategoryContent());?>
+						<?php $categoryIds = array()?>
+						<?php foreach ($rs->getCategoryContent() as $catcon):?>
+								<a href="<?php echo url_for('page/index?categoryRoute='.$catcon->getCategory()->getRoute())?>" class="left details" style="text-decoration:underline;">
+										<?php echo $catcon->getCategory()?><?php echo (++$i < $nb) ? ',' : '';?>
+								</a>
+							 <?php $categoryIds[$catcon->getCategoryId()] = $catcon->getCategoryId()?>
+						<?php endforeach?>
+						<br clear="all">
+				</li>
+				<li>
+        		<span class="details" style="margin:0;">Нэмэгдсэн: <?php echo time_ago($rs->getCreatedAt())?></span>
+				</li>
+				<li>
+						<span class="details" style="margin:0;">Нээгдсэн:</span>
+        		<span class="details" style="margin:-1px 0 0 2px;font-size:14px;"><?php echo $rs->getNbViews()?></span>
+        </li>
+				<li>
+						<span class="details" style="margin:0;">Сэтгэгдэл:</span>
+        		<span class="details" style="margin:-1px 0 0 2px;font-size:14px;"><?php echo $rs->getNbComment()?></span>	
+				</li>
+				<li>
+						<!--fb like-->
+						<?php $host = sfConfig::get('app_host')?>
+						<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" 
+    						 data-href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url?>&amp;title=<?php echo $title?>"></div>
+				</li>
+				<li>
+						<!--fb share-->
+						<div class="fb-share-button" data-layout="button_count"
+								 data-href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url?>&amp;title=<?php echo $title?>"></div>
+				</li>
+				<li>
+						<!--fb send-->
+						<div class="fb-send" data-href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url?>&amp;title=<?php echo $title?>"></div>
+				</li>
+				<li>
+						<!--tweet-->
+						<a class="twitter-share-button" href="https://twitter.com/share?url=<?php echo $url?>&amp;via=<?php echo sfConfig::get('app_domain');?>&amp;text=<?php echo $title?>">Tweet</a>
+				</li>
+		</ul><!--navigation-->
+		
+		<!--similars-->
+		<?php include_partial('similars', array('id'=>$rs->getId(), 'categoryIds'=>$categoryIds));?>
+		<br clear="all">
+</div>
+
 <br clear="all">
-
-<!--similars-->
-<?php include_partial('similars', array('id'=>$rs->getId(), 'categoryIds'=>$categoryIds));?>
-
-<!--random-->
-<?php include_partial('random', array('id'=>$rs->getId(), 'categoryIds'=>$categoryIds));?>
 
 <!--comments-->
 <?php include_partial('comment/index', array('objectType'=>'content', 'objectId'=>$rs->getId())) ?>
-
-<?php //include_partial('love/js', array());?>
 
 <script type="text/javascript">
 </script>
