@@ -31,14 +31,14 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
     <div class="wrapper">
         <!--banner header-->
 				<?php $rs = GlobalTable::doFetchOne('Banner', array('path', 'ext', 'link', 'target'), array('position'=>'header', 'limit'=>1));?>
-        <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>1100, 'height'=>100));?>
+        <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>1100, 'height'=>100, 'close'=>false));?>
         
         <table width="100%" style="margin:5px 0 10px 0;">
         		<tr>
         				<td width="33%" align="left">
         						<!--banner header left-->
 										<?php $rs = GlobalTable::doFetchOne('Banner', array('path', 'ext', 'link', 'target'), array('position'=>'header-left', 'limit'=>1));?>
-						        <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>260, 'height'=>60));?>
+						        <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>260, 'height'=>60, 'close'=>false));?>
         				</td>
         				<td width="40%" align="center">
         						<!--logo-->
@@ -50,7 +50,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
         						<div class="right">
 	        						<!--banner header right -->
 											<?php $rs = GlobalTable::doFetchOne('Banner', array('path', 'ext', 'link', 'target'), array('position'=>'header-right', 'limit'=>1));?>
-							        <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>260, 'height'=>60));?>
+							        <?php include_partial("partial/banner", array('rs'=>$rs, 'width'=>260, 'height'=>60, 'close'=>false));?>
 						        </div>
         				</td>
         		</tr>
@@ -71,7 +71,6 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 												</a>
 										</li>
 								<?php endforeach;?>
-								<li style="float:right;"><a href="https://youtube.com/<?php echo sfConfig::get('app_youtube')?>" target="_blank" style="padding:3px 5px;"><?php echo image_tag('icons/socials/youtube-6-16.png', array())?></a></li>
 								<li style="float:right;"><a href="https://twitter.com/<?php echo sfConfig::get('app_twitter')?>" target="_blank" style="padding:3px 5px;"><?php echo image_tag('icons/socials/twitter-16.png', array())?></a></li>
 								<li style="float:right;"><a href="http://facebook.com/<?php echo sfConfig::get('app_facebook')?>" target="_blank" style="padding:3px 5px;"><?php echo image_tag('icons/socials/facebook-16.png', array())?></a></li>
             </ul>

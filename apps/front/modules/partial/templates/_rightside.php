@@ -26,6 +26,15 @@
 	    		</blockquote>
     		</div>
     </div>
+    <br clear="all">
+    <br clear="all">
+    
+    <!--top news of all the time-->
+    <?php $rss = Doctrine::getTable('Content')->doFetchArray(array('title', 'route', 'cover', 'created_at'), array('limit'=>5, 'orderBy'=>'nb_views DESC, sort DESC'));?>
+    <?php foreach ($rss as $rs):?>
+    		<?php include_partial('page/box_s', array('rs'=>$rs));?>
+    <?php endforeach;?>
+    <br clear="all">
 
     <!--banner right middle-->
     <?php $rs = GlobalTable::doFetchOne('Banner', array('path, mobile_img, ext, link, target'), array('position'=>'right-middle', 'limit'=>1));?>

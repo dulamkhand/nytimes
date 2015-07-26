@@ -28,8 +28,7 @@
         }
     ?>
     <?php echo GlobalLib::clearOutput($rs->getBody())?>
-    <br clear="all">
-    
+    <br clear="all">    
     
     <!--prev and next-->
     <?php include_partial('prev_next', array('id'=>$rs->getId()));?>

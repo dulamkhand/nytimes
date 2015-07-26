@@ -1,6 +1,10 @@
 <?php $host = sfConfig::get('app_host')?>
 <?php if($rs && $rs['path']) { ?>
-	<a <?php if($rs['link']) echo 'href="'.$rs['link'].'"'?> <?php if($rs['target']) echo 'target="_blank"'?>>
+	<?php $id = rand()?>
+	<?php if(!isset($close) || $close):?>
+			<a onclick="$('.b<?php echo $id?>').hide();" class="details right b<?php echo $id?>" style="cursor:pointer;">Сурталчилгаа хаах</a>
+	<?php endif?>
+	<a <?php if($rs['link']) echo 'href="'.$rs['link'].'"'?> <?php if($rs['target']) echo 'target="_blank"'?> class="b<?php echo $id?>">
 		    <?php if($rs['ext'] == 'swf') { ?>
 				<!--mobile ued flash banner haruulahgui-->
 				<?php if(GlobalLib::isMobileDevice()){ ?>
