@@ -9,8 +9,8 @@
 <?php //include_partial("partial/clients", array());?>
 
 <div id="footer">
-	<div class="wrapper" style="border-top:2px solid #e2e2e2;padding:2px 0px;">
-		<div style="border-top:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2;padding:5px 0px;">
+	<div class="wrapper" style="border-top:2px solid #e2e2e2;padding:2px 0;">
+		<div style="border-top:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2;padding:5px 0px 10px 0;">
 				<!--logo-->
         <a href="<?php echo url_for('@homepage')?>" style="margin:0 8px 0 0;">
             <?php echo image_tag('logo377.png', array('style'=>'max-width:200px;'))?>
@@ -19,13 +19,14 @@
         <ul>  
        		<?php $rss = GlobalTable::doFetchArray('Page', array('type', 'title'), array('limit'=>100));?>
 					<?php foreach ($rss as $rs):?>
-							<li style="padding:5px 0;">
+							<li style="padding:7px 0; float:left; width:350px;">
 									<a href="<?php echo url_for('main/'.$rs['type'])?>">
 										&raquo; <?php echo $rs['title']?>
 									</a>
 							</li>
 					<?php endforeach;?>
  		   	</ul>
+ 		   	<br clear="all">
   	</div>
   	<span>&copy;2015 <?php echo sfConfig::get('app_domain_www')?></span>
   </div><!--wrapper-->

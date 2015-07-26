@@ -10,11 +10,9 @@
       <textarea name="comment-area" id="comment-area" style="margin:0 0 4px 0;border:1px solid #ccc;width:600px;height:80px;">Сэтгэгдэл</textarea>
       <div id="comment-error" style="color:#ED242D;margin:0 0 6px 0;"></div>
     
-      <span style="padding:1px 0px 1px 1px;border:1px solid #000;background:#fff;width:91px;display:block;">
-          <button class="button" type="button" style="width:90px;padding:4px 15px;" value="Илгээх" onclick="submitCommentForm();">
-              Илгээх
-          </button>
-      </span>
+      <button class="button" type="button" style="border:1px solid #ccc;border-radius:2px;-moz-border-radius:2px;background:#e2e2e2;padding:4px 25px;color:#444;" value="Илгээх" onclick="submitCommentForm();">
+          Илгээх
+      </button>
       <?php echo image_tag('icons/loading.gif', array('id'=>'comment-loader', 'style'=>'display:none;'))?>
       <br clear="all">
 </form>

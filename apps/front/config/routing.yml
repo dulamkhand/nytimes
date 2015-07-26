@@ -2,42 +2,36 @@
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
 # main
-search:
-  url:   /search.htm
-  param: { module: main, action: search }
 about:
-  url:   /about.htm
+  url:   /aboutus.php
   param: { module: main, action: about }
 advertisement:
-  url:   /advertisement.htm
+  url:   /ad.php
   param: { module: main, action: advertisement }
+privacy:
+  url:   /privacy.php
+  param: { module: main, action: privacy }
+terms:
+  url:   /privacy.php
+  param: { module: main, action: terms }
+cooperate:
+  url:   /cooperate.php
+  param: { module: main, action: cooperate }
 contact:
-  url:   /contact.htm
+  url:   /contactus.php
   param: { module: main, action: contact }
 404:
-  url:   /404.htm
+  url:   /404.php
   param: { module: main, action: 404 }
 
 # page
 index:
-  url:   /c/:categoryRoute.htm
+  url:   /i/:categoryRoute.php
   param: { module: page, action: index }
   
 show:
-  url:   /t/:route.htm
+  url:   /s/:route.php
   param: { module: page, action: show }
-
-byNbView:
-  url:   /byNbView.htm
-  param: { module: page, action: byNbView }
-  
-byNbComment:
-  url:   /byNbComment.htm
-  param: { module: page, action: byNbComment }
-  
-archive:
-  url:   /archive.htm
-  param: { module: page, action: archive }
 
 # default rules
 homepage:
@@ -47,7 +41,7 @@ homepage:
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
-  url:   /:module.htm
+  url:   /:module.php
   param: { action: index }
 
 default:

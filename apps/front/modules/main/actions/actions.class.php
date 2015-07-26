@@ -26,14 +26,6 @@ class mainActions extends sfActions
         $this->setLayout('homeLayout');
     }
     
-    public function executeSearch(sfWebRequest $request)
-    {		
-    		$this->s = GlobalLib::clearInput($request->getParameter('s'));
-        global $CONTENT_COLUMNS;
-        $this->pager = Doctrine::getTable('Content')->getPager($CONTENT_COLUMNS,
-            array('s'=>$this->s), $request->getParameter('page'));	
-    }
-    
     # BEGIN OF PAGE
     public function executeAbout(sfWebRequest $request)
     {	

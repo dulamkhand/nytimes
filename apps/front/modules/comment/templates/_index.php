@@ -1,5 +1,5 @@
 <div style="background:#fff;width:830px;padding:0px;border-top:2px solid #000;">
-    <h1 id="comments-title" style="border-bottom:1px solid #dedede;padding:7px 0 5px 0;">Сэтгэгдэл</h1>
+    <h1 id="comments-title" style="border-bottom:1px solid #dedede;padding:7px 0 5px 0;">Сэтгэгдэл үлдээх</h1>
 
     <?php 
     $total = Doctrine::getTable('Comment')->doCount(array('objectType'=>$objectType, 'objectId'=>$objectId));
