@@ -3,8 +3,9 @@
 
 # default values
 all:
-  host: http://localhost/nytimes/web/
+  #host: http://localhost/nytimes/web/
+  host: http://ny.netne.net/
   webname: Спорт мэдээ - Монголын болон Дэлхий дахины спортын мэдээ мэдээлэл
-  feedbackmail: batsukhd.mn@gmail.com
+  feedbackmail: uuganbayar.ur@gmail.com
   pager: 20
   limit: 20

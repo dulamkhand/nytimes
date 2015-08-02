@@ -3,11 +3,12 @@
 
 # default values
 all:
-  host: http://localhost/nytimes/web/
+  #host: http://localhost/nytimes/web/
+  host: http://ny.netne.net/
   webname: Спорт мэдээ - Монголын болон Дэлхий дахины спортын мэдээ мэдээлэл
   domain: sport.mn
   domain_www: www.sport.mn
-  feedback_email: batsukhd.mn@gmail.com
+  feedback_email: uuganbayar.ur@gmail.com
   facebook: pages/Firewall-Solution/1406628809597011
   twitter: 
   youtube: 

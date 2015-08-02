@@ -1,29 +1,23 @@
 _archive:
-  enabled:     false
+  enabled:     true
 
 _box:
-  enabled:     false
+  enabled:     true
   
-_boxSmall:
-  enabled:     false
-  
-_featured:
-  enabled:     false
-  
-_icons:
-  enabled:     false
-  
-_prev_next:
-  enabled:     false
+_box_s:
+  enabled:     true
 
-_random:
-  enabled:     false
+_box_m:
+  enabled:     true
+   
+_featured:
+  enabled:     true
   
-_share:
-  enabled:     false
+_navs:
+  enabled:     true
   
 _similars:
-  enabled:     false
+  enabled:     true
 
 _top5:
-  enabled:     false
+  enabled:     true

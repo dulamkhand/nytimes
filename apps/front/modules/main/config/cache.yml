@@ -1,2 +1,5 @@
 _contact:
-  enabled:     false
+  enabled:     true
+  
+_page:
+  enabled:     true

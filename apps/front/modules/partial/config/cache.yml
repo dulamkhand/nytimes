@@ -1,20 +1,23 @@
-_bannerFloating:
-  enabled:     false
+_banner:
+  enabled:     true
 
 _bannerHome:
-  enabled:     false
+  enabled:     true
   
 _bannerMiddle:
-  enabled:     false
+  enabled:     true
 
+_category:
+  enabled:     true
+  
 _footer:
-  enabled:     false
+  enabled:     true
   
 _header:
-  enabled:     false
+  enabled:     true
+
+_leftside:
+  enabled:     true
   
 _rightside:
-  enabled:     false
-  
-_socialsFloating:
-  enabled:     false
+  enabled:     true
