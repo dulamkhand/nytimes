@@ -3,8 +3,8 @@
 
 # default values
 all:
-  #host: http://localhost/nytimes/web/
-  host: http://ny.netne.net/
+  host: http://localhost/nytimes/web/
+  #host: http://ny.netne.net/
   webname: Спорт мэдээ - Монголын болон Дэлхий дахины спортын мэдээ мэдээлэл
   domain: sport.mn
   domain_www: www.sport.mn

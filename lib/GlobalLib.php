@@ -29,6 +29,7 @@ class GlobalLib
                   'right-top'		=> 'Right top 250 x 600',
                   'right-middle'=> 'Right middle 250 x 600',
                   'footer'			=> 'Footer 1100 x 150', 
+                  'floating'		=> 'Floating 230 x 600',
     );
 
     public static $mod_permissions = array('content'=>'Content', 'comment'=>'Comment', 'category'=>'Category', 'banner'=>'Banner',
