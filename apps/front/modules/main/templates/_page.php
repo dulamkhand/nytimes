@@ -5,7 +5,7 @@
 		<?php echo GlobalLib::clearOutput($page->getIntro())?>
 		<br clear="all">
 		<br clear="all">
-		<hr style="border:0;border-top:1px dashed #ccc;">
+		<hr style="border:0;border-top:2px dotted #ededed;">
 		<br clear="all">
 		<?php echo GlobalLib::clearOutput($page->getContent())?>
 		<br clear="all">

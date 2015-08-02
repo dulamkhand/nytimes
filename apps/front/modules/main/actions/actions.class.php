@@ -81,7 +81,6 @@ class mainActions extends sfActions
             $this->getResponse()->setTitle(sfConfig::get('app_webname').' | Холбоо барих');
     		}
 			  $this->form = $form;
-			  $this->setLayout('wideLayout');
     }
     # EO PAGE
     

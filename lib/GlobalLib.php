@@ -31,8 +31,8 @@ class GlobalLib
                   'footer'			=> 'Footer 1100 x 150', 
     );
 
-    public static $mod_permissions = array('content'=>'Content', 'comment'=>'Comment', 'category'=>'Category', 'poll'=>'Poll',
-                  'banner'=>'Banner', 'client'=>'Clients',  'page'=>'Page', 'feedback'=>'Feedback', 'admin'=>'Admin');
+    public static $mod_permissions = array('content'=>'Content', 'comment'=>'Comment', 'category'=>'Category', 'banner'=>'Banner',
+     																			 'page'=>'Page', 'feedback'=>'Feedback', 'admin'=>'Admin');
               
     public static $bad_words = array('shit','crap','damn','bugger','jerk','asshole','bastard','douche','slut','fucking','fuck','bitch','cock','dick','darn','fag','piss','penis','pussy');
 

@@ -132,3 +132,4 @@ strong,b{font-weight:bold!important;}
 .details{font-size:10px;text-transform:uppercase;line-height:13px;color:#aaa;}
 .more{font-size:11px;text-transform:uppercase;line-height:13px;font-weight:bold;}
 
+ul.error_list li{color:red;font-size:11px;}

@@ -14,10 +14,10 @@ class FeedbackForm extends BaseFeedbackForm
   {
       # WIDGETS
       $this->widgetSchema['organization']= new sfWidgetFormInputText(array(), array('class'=>'feedback', 'value'=>'Байгууллага', 'id'=>'feedback_org')); // TODO: should be autocomplete
-      $this->widgetSchema['name']        = new sfWidgetFormInputText(array(), array('class'=>'feedback', 'value'=>'Таны бүтэн нэр', 'id'=>'feedback_name'));
-      $this->widgetSchema['email']       = new sfWidgetFormInputText(array(), array('class'=>'feedback', 'value'=>'Имэйл хаяг', 'id'=>'feedback_email'));
-      $this->widgetSchema['phone']       = new sfWidgetFormInputText(array(), array('class'=>'feedback', 'value'=>'Утасны дугаар', 'id'=>'feedback_phone'));
-    	$this->widgetSchema['message']     = new sfWidgetFormTextarea(array(), array('class'=>'feedback', 'value'=>'Захиадал', 'id'=>'feedback_message'));
+      $this->widgetSchema['name']        = new sfWidgetFormInputText(array(), array('class'=>'feedback', 'value'=>'Таны нэр', 'id'=>'feedback_name'));
+      $this->widgetSchema['email']       = new sfWidgetFormInputText(array(), array('class'=>'feedback', 'value'=>'Имэйл', 'id'=>'feedback_email'));
+      $this->widgetSchema['phone']       = new sfWidgetFormInputText(array(), array('class'=>'feedback', 'value'=>'Утас', 'id'=>'feedback_phone'));
+    	$this->widgetSchema['message']     = new sfWidgetFormTextarea(array(), array('class'=>'feedback', 'value'=>'Захидал', 'id'=>'feedback_message'));
     	  	
     	# VALIDATORS
     	$this->validatorSchema['organization']= new sfValidatorPass();

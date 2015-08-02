@@ -22,7 +22,7 @@ class adminActions extends sfActions
           if ($form->isValid()) {
               $admin = $form->getObject1();
               $this->getUser()->signIn($admin);
-              $this->getUser()->setFlash('flash', 'Successfully logged in.', true);
+              $this->getUser()->setFlash('flash', 'Амжилттай нэвтэрлээ.', true);
               $this->redirect("@homepage");
           }
       }
@@ -31,7 +31,7 @@ class adminActions extends sfActions
 
   public function executeLogout(sfWebRequest $request) {
       $this->getUser()->signOut();
-      $this->getUser()->setFlash('flash', 'Successfully logged out.', true);
+      $this->getUser()->setFlash('flash', 'Амжилттай гарлаа.', true);
       $this->redirect('@login');
   }
   
@@ -79,7 +79,7 @@ class adminActions extends sfActions
       $this->forward404Unless($admin = Doctrine::getTable('Admin')->find(array($request->getParameter('id'))), sprintf('Object admin does not exist (%s).', $request->getParameter('id')));
       try {
           $admin->delete();
-          $this->getUser()->setFlash('flash', 'Successfully deleted.', true);
+          $this->getUser()->setFlash('flash', 'Амжилттай устлаа.', true);
       } catch (Exception  $e){}
       $this->redirect('admin/index');
   }
@@ -91,7 +91,7 @@ class adminActions extends sfActions
       $this->forward404Unless(in_array($cmd = $request->getParameter('cmd'), array(0,1)));
       $admin->setIsActive($cmd);
       $admin->save();
-      $this->getUser()->setFlash('flash', 'Successfully saved.', true);
+      $this->getUser()->setFlash('flash', 'Амжилттай хадгалагдлаа.', true);
       $this->redirect('admin/index');
   }
 
@@ -107,7 +107,7 @@ class adminActions extends sfActions
           $admin->setCatPermissions(join(";", $request->getParameter('cat_permissions')));
           $admin->save();
     
-          $this->getUser()->setFlash('flash', 'Successfully saved.', true);
+          $this->getUser()->setFlash('flash', 'Амжилттай хадгалагдлаа.', true);
           $this->redirect('admin/index');
       }
   }
