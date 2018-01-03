@@ -5,9 +5,3 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn:      mysql:host=localhost;dbname=nytimes
-      username: root
-      password:
-      #dsn:      mysql:host=mysql8.000webhost.com;dbname=a5625689_ny
-      #username: a5625689_root
-      #password: mongolia$
